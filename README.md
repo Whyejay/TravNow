@@ -31,5 +31,6 @@ Navigation bar includes:
 
 # Additional Functions
 Search bar with Filter function?
+Google Map 
 
 
