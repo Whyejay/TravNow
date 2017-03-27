@@ -1,0 +1,64 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: azure;
+    z-index: 9999;
+    border: 0;
+    font-size: 15px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 0.2px;
+    border-radius: 0;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.navbar-brand>img {
+    max-height: 120%;
+    height: 120%;
+    width: auto;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: cornflowerblue !important;
+    background-color: aliceblue!important;
+}
+
+.jumbotron {
+    height: 500px;
+    margin-bottom: 0px;
+    background-color: azure;
+    background-image: url(../img/jumbotronbackground.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.jumbotron h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.jumbotron p {
+    font-size: 30px;
+}
+
+.bg_grey {
+    color: aliceblue;
+}
+
+.middle h1 {
+    max-height: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: serif
+}
+
+.travel {
+    content: url("../img/travel.jpg");
+    height: 100%;
+}
+
+.eat {
+    content: url("../img/eat.jpg");
+    height: 100%;
+}
