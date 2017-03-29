@@ -7,47 +7,70 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
 </head>
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="indexPage"><img src="../img/logo.png" alt="Logo Picture"></a>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo Picture"></a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#countries">Countries</a></li>
+                <li class="#home"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a>
+                			
+                </li>
+                <li><a href="#countries">Countries</a>
+					<ul>
+                <li><a href="#">Australia</a></li>
+                <li><a href="#">Brazil</a></li>
+                <li><a href="#">China</a></li>
+                <li><a href="#">Denmark</a></li>
+                <li><a href="#">Egypt</a></li>
+              		</ul>
+                </li>
                 <li><a href="#activities">Activities</a></li>
                 <li><a href="#restaurants">Restaurants</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li </ul>
+               <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Sign Up / Sign in </a></li </ul>
         </div>
     </nav>
     <div class="jumbotron text-center img-responsive container-fluid">
-        <h1>Going Places</h1>
+        <a href="#"><h1>Going Places</h1></a>
         <p>To travel is to live</p>
     </div>
     <div class="middle text-center container-fluid bg-grey">
         <h1>Join us to share your greatest experience and memories!</h1>
         <div class="row text-center slideanim">
-            <div class="travel col-sm-4 img-responsive">
-
+        
+            <div class="travel text-center img-responsive container-fluid col-sm-4">
+            <a href="#"><h2>Travel</h2></a>
+            
             </div>
-            <div class="eat col-sm-4 img-responsive">
-
+            <div class="eat text-center img-responsive container-fluid col-sm-4">
+            <a href="#"><h2>Savour</h2></a>
             </div>
-            <div class="relax col-sm-4 img-responsive">
-
+            <div class="relax text-center img-responsive container-fluid col-sm-4">
+            <a href="#"><h2>Relax</h2></a>
             </div>
         </div>
+   
+    </div>
+    <div class="bottom text-center container-fluid bg-grey">
+    	<p>#1 Trending Place</p>
+    	<hr></hr>
+    	<div class="trend text-center img-responsive container-fluid col-sm-10">
+
+    	</div>
     </div>
 
 
 </body>
+
+
 </html>
