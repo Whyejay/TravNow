@@ -1,4 +1,4 @@
-<form method="POST" action="signup.php">
+<form method="POST" action="./signup.php">
     <div class="container">
         <label><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="name" required>
