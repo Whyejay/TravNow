@@ -21,12 +21,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = $select->get_result();
         if ($result->num_rows != 0) {
             $info = $result->fetch_assoc();
-            if (password_verify($password, $info['password'])) {
-                $action['result'] = 'success';
-                $message = "Login successfully";
-            } else {
+            if ($info['active'] != '1') {
                 $action['result'] = 'error';
-                $message = "Please check your password!";
+                $message = "Please confirm your account!";
+            } else {
+                if (password_verify($password, $info['password'])) {
+                    $action['result'] = 'success';
+                    $message = "Login successfully";
+                } else {
+                    $action['result'] = 'error';
+                    $message = "Please check your password!";
+                }
             }
         } else {
             $action['result'] = 'error';

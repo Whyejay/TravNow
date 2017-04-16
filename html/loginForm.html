@@ -56,7 +56,6 @@
                     data: $(this).serialize(),
                     dataType: 'json',
                     success: function (response) {
-                        alert(response);
                         var result = response.result;
                         var message = response.message;
                         if (result == 'success') {
