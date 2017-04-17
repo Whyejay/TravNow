@@ -56,10 +56,10 @@ a.hiddenanchor{
 }
 
 #wrapper h1{
-	font-size: 48px;
+	font-size: 36px;
 	color: #1a1a1a;
 	padding: 2px 0 10px 0;
-	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-family: 'Helvetica';
 	font-weight: bold;
 	text-align: center;
 	padding-bottom: 3px;
@@ -107,23 +107,23 @@ input {
 #wrapper p.button input{
 	width: 30%;
 	cursor: pointer;	
-	background:black;
+	background:#00b377;
 	padding: 8px 5px;
 	font-family:Helvetica;
-	color: #fff;
-	font-size: 20px;	
+	color: #000;
+	font-size: 17px;	
 	border: 1px solid #1a1a1a;;	
 	margin-bottom: 10px;	
-	text-shadow: 0 1px 1px #1a1a1a;;
-	border-radius:6px;
+	border-radius:4px;
+	font-weight: bold;
 
 }
 #wrapper p.button input:hover{
-	background:#e6e6e6;
+	background:#80ffd4;
 }
 #wrapper p.button input:active,
 #wrapper p.button input:focus{
-	background:#f2f2f2;
+	background:#ccffee;
 	position: relative;
 	top: 1px;
 	border: 1px solid #1a1a1a;);	
@@ -165,28 +165,30 @@ p.change_link{
 	padding: 17px 30px 38px 30px;
 	font-size: 16px	;
 	text-align: right;
-	background:#C9C9C9;
+	background:#e6e6e6;
 	
 }
 #wrapper p.change_link a {
 	display: inline-block;
-	font-size:15px;
+	font-size:17px;
 	font-weight: bold;
-	background: #808080;
-	padding: 1px 6px 1px 6px;
+	background: #d9d9d9;
+	padding: 2px 8px 2px 8px;
 	color:black;
 	margin-left: 10px;
 	text-decoration: none;
 	border-radius: 4px;
-	border: 1px solid #737373;
+	border: 1px solid #808080;
 	transition: all 0.4s  linear;
 }
 #wrapper p.change_link a:hover {
-	color:#e6e6e6;
-	background: #000000;
+	color:#000;
+	background: #999999;
 	border: 1px solid #000000;
 }
 #wrapper p.change_link a:active{
+	background:#bfbfbf;
+	color:#000;
 	position: relative;
 	top: 1px;
 }
@@ -208,6 +210,9 @@ p.change_link{
 }	
 #login{
 	z-index: 22;
+}
+#pt{
+	height:200px;
 }
 #toregister:target ~ #wrapper #register,
 #tologin:target ~ #wrapper #login{
