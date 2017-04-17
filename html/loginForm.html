@@ -34,15 +34,21 @@
                         var message = response.message;
                         if (result == 'success') {
                             // go to login page with the below message
-                            alert(message);
+                            //alert(message);
+                            $('#output').html('Success')
+                            
                         }
                         else {
                             // show error messages
-                            alert(message);
+                            //alert(message);
+                            $('#output').html('Error1');
+
+                            
                         }
                     },
                     error: function (jXHR, textStatus, errorThrown) {
-                        alert(errorThrown);
+                         //alert(errorThrown);
+                        $('#output').html('Error2');
                     }
                 });
             });
@@ -93,7 +99,7 @@
             <p>
                 Start your journey here !
             </p>
-
+            <div id="output"></div>
 
             <a class="hiddenanchor" id="tologin"></a>
             <a class="hiddenanchor" id="toregister"></a>
@@ -154,15 +160,21 @@
                         <p class="button">
                             <input id="signup_button" type="submit" value="Sign up" name="submit"/>
                         </p>
+                       
                         <p class="change_link">
                             Already a member ?
                             <a href="#tologin" class="to_register">Sign in Here</a>
                         </p>
+                        
                     </form>
+                     
                 </div>
+
                     <div style="border-right:medium #000 solid; height:500px;" />
                     </div>
+
             </div>
+
         </div>
         <div class="col-sm-3">
             <div class="pt" id="pt"></div>
