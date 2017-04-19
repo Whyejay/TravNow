@@ -11,14 +11,14 @@
 </head>
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <link rel="stylesheet" type="text/css" href="css/activity.css">
+    <link rel="stylesheet" type="text/css" href="../css/activity.css">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo Picture"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="Logo Picture"></a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="#home"><a href="index.html">Home</a></li>
+                <li class="#home"><a href="../index.html">Home</a></li>
                 <li><a href="#about">About</a>
                 			
                 </li>
@@ -37,7 +37,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
-                <li><a href="./php/loginForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up / Sign in </a></li </ul>
+                <li><a href="../html/loginForm.html"><span class="glyphicon glyphicon-user"></span> Sign Up / Sign in </a></li </ul>
         </div>
     </nav>
  
@@ -50,7 +50,7 @@
         <div class="actcontent">
             <p class="acttitle">The Sand Pumping Jetty</p>
             <p class="actdate">07 April 2017</p>
-            <img src="img/fishing.jpg">
+            <img src="../img/fishing.jpg">
             <p class="actcaption">Fishing - This spot is on fire all year round for the seasoned fisherman. Resident expert Herb says to try and aim for tailor fish throughout the winter, while the lead-up to summer is a great time for nice flathead, dart, bream, whiting and even the odd big jewfish. “It’s a great spot to fish right now actually, especially with the early spring weather. It’s a lovely spot to spend the day even if you don’t catch a thing — not that that’s an option.”</p>
             <button type="button">Read More</button>
             <button type="button">fblike</button>

@@ -65,8 +65,9 @@
                         var result = response.result;
                         var message = response.message;
                         if (result == 'success') {
-                            // go to login page with the below message
-                            $('#output').html(message);
+                            // go to index page
+                            window.location.href = "http://localhost/project/html/pause.html";
+                            return false;
                         }
                         else {
                             // show error messages
@@ -85,7 +86,7 @@
 <div id="hero-banner" class="jumbotron container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <a href="../index.html"><img class="logo" height="100" width="100" src="../img/logo.png"/></a>
+            <a href="../index.php"><img class="logo" height="100" width="100" src="../img/logo.png"/></a>
         </div>
         <div class="col-sm-9">
             <h1 class="display-3">Travel Now</h1>
@@ -119,8 +120,8 @@
                                    placeholder="Password"/>
                         </p>
                         <p class="keeplogin">
-                            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping"/>
-                            <label for="loginkeeping">Keep me logged in</label>
+                            <input type="checkbox" name="remember_me" id="remember_me" value="remember_me"/>
+                            <label for="remember_me">Remember me</label>
                         </p>
                         <p class="login button">
                             <input id="login button" type="submit" value="Sign In"/>

@@ -11,14 +11,14 @@
 </head>
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <link rel="stylesheet" type="text/css" href="css/eat.css">
+    <link rel="stylesheet" type="text/css" href="../css/eat.css">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo Picture"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="Logo Picture"></a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="#home"><a href="index.html">Home</a></li>
+                <li class="#home"><a href="../index.html">Home</a></li>
                 <li><a href="#about">About</a>
                 			
                 </li>
@@ -37,7 +37,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
-                <li><a href="./php/loginForm.php"><span class="glyphicon glyphicon-user"></span> Sign Up / Sign in </a></li </ul>
+                <li><a href="../html/loginForm.html"><span class="glyphicon glyphicon-user"></span> Sign Up / Sign in </a></li </ul>
         </div>
     </nav>
  
@@ -50,7 +50,7 @@
         <div class="eatcontent">
             <p class="eattitle">The Boathouse at Rocketts Landing</p>
             <p class="eatdate">19 May 2016</p>
-            <img src="img/eat1.jpg">
+            <img src="../img/eat1.jpg">
             <p class="eatcaption">Experience everything that is unique about Richmond at our Rocketts Landing location: a vibrant city among luscious greenery and calming water. Not to mention expertly prepared local seafood, pizza, and more.</p>
             <button type="button">Read More</button>
             <button type="button">fblike</button>
@@ -59,7 +59,7 @@
         <div class="eatcontent">
             <p class="eattitle">Chicken Institute</p>
             <p class="eatdate">24 March 2016</p>
-            <img src="img/eat2.jpg">
+            <img src="../img/eat2.jpg">
             <p class="eatcaption">Don’t let the name fool you. Chicken Institute is not a chicken-only butcher in your local shopping centre, nor is it a school for poultry upskilling. It’s a Korean restaurant on Fitzroy Street serving up the surprisingly excellent combination of fried chicken in buckets, bibimbaps and milkshakes.</p>
             <button type="button">Read More</button>
             <button type="button">fblike</button>
@@ -68,7 +68,7 @@
         <div class="eatcontent">
             <p class="eattitle">Longrain</p>
             <p class="eatdate">22 March 2016</p>
-            <img src="img/eat3.jpg">
+            <img src="../img/eat3.jpg">
             <p class="eatcaption">A decade and a half since its arrival transformed Sydney's understanding of high-end Thai cuisine, Longrain remains a buzzing destination stalwart on the local dining scene. It isn’t hard to see why. The interior is fun but fancy enough, the service warm and accommodating. And the food? Well, after a long-overdue return visit, we can tell you Longrain is still kicking ass in that department, too.
             </p>
             <button type="button">Read More</button>
