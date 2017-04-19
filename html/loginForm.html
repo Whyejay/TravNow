@@ -35,20 +35,20 @@
                         if (result == 'success') {
                             // go to login page with the below message
                             //alert(message);
-                            $('#output').html('Success')
+                            $('#output').html(response.responseText)
                             
                         }
                         else {
                             // show error messages
                             //alert(message);
-                            $('#output').html('Error1');
+                            $('#output').html(response.responseText);
 
                             
                         }
                     },
                     error: function (jXHR, textStatus, errorThrown) {
                          //alert(errorThrown);
-                        $('#output').html('Error2');
+                        $('#output').html(response.responseText);
                     }
                 });
             });
