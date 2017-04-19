@@ -220,10 +220,25 @@
     margin-top:5px;
 }
 
-footer { 
-    display: block;
-	color: #14394f !important;
-    background-color: black!important;
-    padding: 40px;
+.footer_container{
+    width: 980px;
+	background-color: azure;
+}
+.footer_container strong{
+    font-weight: bold;
+}
+.footer_container div.container{
+    width: 320px;
+    float: left;
+}
+.footer_container ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer_container ul li {
+    width: 160px;
+    float: left;
+}
 	
 }
