@@ -15,5 +15,7 @@ class MySQLDatabase{
     function disconnect(){
         mysqli_close($this->link);
     }
+
+
 }
 ?>

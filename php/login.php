@@ -1,66 +1,98 @@
 <?php
-include_once('connectMySQL.php');
+include_once 'functions.php';
 
 $action = array();
 $action['result'] = null;
 $message = '';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = clear_spaces($_POST['username']);
-    $password = clear_spaces($_POST['password']);
-    if ($username != '' && $password != '') {
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $user_exist = get_user_by_username_and_password($username, $password);
 
-        // connect database
-        $database = new MySQLDatabase();
-        $db_connection = $database->connect('root', 'KhoaUQ95', 'database_infs3202');
+    if ($user_exist) {
+        $action['result'] = 'success';
+        $message = "Login successfully";
 
-        // process
-        $selectQuery = "SELECT * FROM user WHERE username = ?";
-        $select = $db_connection->prepare($selectQuery);
-        $select->bind_param('s', $username);
-        if ($select->execute())
-            $result = $select->get_result();
-        if ($result->num_rows != 0) {
-            $info = $result->fetch_assoc();
-            if ($info['active'] != '1') {
-                $action['result'] = 'error';
-                $message = "Please confirm your account!";
-            } else {
-                if (password_verify($password, $info['password'])) {
-                    $action['result'] = 'success';
-                    $message = "Login successfully";
-                } else {
-                    $action['result'] = 'error';
-                    $message = "Please check your password!";
-                }
-            }
-        } else {
-            $action['result'] = 'error';
-            $message = "Please check your username!";
+    } else {
+        $action['result'] = 'error';
+        $message = "Please check your login details";
+    }
+
+} else if (isset($_REQUEST['provider'])) {
+    // the selected provider
+    $provider_name = $_REQUEST["provider"];
+
+    try {
+        // inlcude HybridAuth library
+        // change the following paths if necessary
+        $config = 'D:\file hoc hanh\XAMPP\htdocs\project\vendor\hybridauth\hybridauth\hybridauth\config.php';
+        require_once('../vendor/autoload.php');
+
+        // initialize Hybrid_Auth class with the config file
+        $hybridauth = new Hybrid_Auth($config);
+
+        // try to authenticate with the selected provider
+        $adapter = $hybridauth->authenticate($provider_name);
+
+        // then grab the user profile
+        $user_profile = $adapter->getUserProfile();
+
+    } catch (Exception $e) {
+        switch ($e->getCode()) {
+            case 0 :
+                echo "Unspecified error.";
+                break;
+            case 1 :
+                echo "Hybridauth configuration error.";
+                break;
+            case 2 :
+                echo "Provider not properly configured.";
+                break;
+            case 3 :
+                echo "Unknown or disabled provider.";
+                break;
+            case 4 :
+                echo "Missing provider application credentials.";
+                break;
+            case 5 :
+                echo "Authentication failed The user has canceled the authentication or the provider refused the connection.";
+                break;
+            case 6 :
+                echo "User profile request failed. Most likely the user is not connected to the provider and he should to authenticate again.";
+                $authProvider->logout();
+                break;
+            case 7 :
+                echo "User not connected to the provider.";
+                $authProvider->logout();
+                break;
+            case 8 :
+                echo "Provider does not support this feature.";
+                break;
         }
 
-        $select->close();
-        $db_connection->close();
+        echo "<br /><br /><b>Original error message:</b> " . $e->getMessage();
 
-        //return result
-        $action['message'] = $message;
-        echo json_encode($action);
-    } else {
+        echo "<hr /><h3>Trace</h3> <pre>" . $e->getTraceAsString() . "</pre>";
 
     }
 
+    $user_exist = get_user_by_provider_and_id( $provider_name, $user_profile->identifier );
+
+    if(!$user_exist )
+    {
+        create_new_hybridauth_user(
+            $user_profile->displayName,
+            $user_profile->email,
+            $provider_name,
+            $user_profile->identifier
+        );
+        echo "SUCCESS";
+    }
+
+
 }
 
-function clear_spaces($data)
-{
-    return preg_replace('/\s+/', '', $data);
-}
+$action['message'] = $message;
+echo json_encode($action);
 
-
-if ($_REQUEST['username'] == "infs" && $_REQUEST['password'] == "3202") {
-//header(“Location: index.html”);
-    echo('CORRECT');
-}
-//else{
-////header(“Location: loginform.php”);
-//}
 ?>
