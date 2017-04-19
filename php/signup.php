@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $insertQuery = "INSERT INTO user(username, password, email ) VALUES (? , ?, ?)";
                 $insert = $db_connection->prepare($insertQuery);
                 if ($insert) {
-                    $insert->bind_param('sss', $username, password_hash($password, PASSWORD_BCRYPT), $email);
+                    $insert->bind_param('sss', $username, password_hash($password, PASSWORD_DEFAULT), $email);
                     if ($insert->execute()) {
                         //get the new user id
                         $user_id = $insert->insert_id;
@@ -76,9 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode($action);
 }
 
-function clear_spaces($data){
-    return preg_replace('/\s+/', '', $data);
-}
+
 function checkUsername($username)
 {
     global $action;
@@ -94,7 +92,7 @@ function checkUsername($username)
         }
         // for english chars + numbers only
         // valid username, alphanumeric & longer than or equals 5 chars
-        if (!preg_match('/^[a-zA-Z0-9]{5,}$/', $username)) {
+        else if (!preg_match('/^[a-zA-Z0-9]{5,}$/', $username)) {
             $action['result'] = 'error';
             $message = 'Invalid username';
         }
@@ -118,15 +116,11 @@ function checkPassword($password, $passwordConfirm)
     } else {
         if (strlen($password) < 8) {
             $action['result'] = 'error';
-            $message = "Your password is too short!";
-        }
-
-        if (!preg_match("#[0-9]+#", $password)) {
+            $message = "Your password must be equal or longer than 8 chars!";
+        } else if (!preg_match("#[0-9]+#", $password)) {
             $action['result'] = 'error';
             $message = "Your password must include at least one number!";
-        }
-
-        if (!preg_match("#[a-zA-Z]+#", $password)) {
+        } else if (!preg_match("#[a-zA-Z]+#", $password)) {
             $action['result'] = 'error';
             $message = "Your password must include at least one letter!";
         }
