@@ -22,7 +22,7 @@
                 <li><a href="#about">About</a>
                 			
                 </li>
-                <li><a href="#countries">Countries</a>
+                <li><a href="travel.html">Travel</a>
 					<ul>
                 <li><a href="#">Australia</a></li>
                 <li><a href="#">Brazil</a></li>
@@ -31,8 +31,8 @@
                 <li><a href="#">Egypt</a></li>
               		</ul>
                 </li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#restaurants">Restaurants</a></li>
+                <li><a href="activity.html">Activities</a></li>
+                <li><a href="eat.html">Restaurants</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -50,7 +50,18 @@
         <div class="travcontent">
             <p class="travtitle">The Adventures of Nicholas</p>
             <p class="travdate">13 April 2017</p>
-            <img src="img/pointreyes.jpg">
+            <img id="myImg" src="img/pointreyes.jpg">
+                <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+                  <!-- Modal Content (The Image) -->
+                  <img class="modal-content" id="img01">
+
+                  <!-- Modal Caption (Image Text) -->
+                  <div id="caption">ASD</div>
+                </div>
             <p class="travcaption">Point Reyes National Seashore is a 71,028-acre park preserve located on the Point Reyes Peninsula in Marin County, California. As a national seashore, it is maintained by the US National Park Service as an important nature preserve.</p>
             <button type="button">Read More</button>
             <button type="button">fblike</button>
@@ -59,7 +70,18 @@
         <div class="travcontent">
             <p class="travtitle">Sebastian's travelogue</p>
             <p class="travdate">12 March 2017</p>
-            <img src="img/curacao.jpg">
+            <img id="myImg2" src="img/curacao.jpg">
+             <div id="myModal2" class="modal">
+
+                <!-- The Close Button -->
+                  <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+
+                  <!-- Modal Content (The Image) -->
+                  <img class="modal-content" id="img02">
+
+                  <!-- Modal Caption (Image Text) -->
+                  <div id="caption2">ASD</div>
+                </div>
             <p class="travcaption">Willemstad is the capital city of Curaçao, a Dutch Caribbean island. It’s known for its old town center, with pastel-colored colonial architecture. The floating Queen Emma Bridge connects the Punda and Otrobanda neighborhoods across Sint Anna Bay. By the water is the 19th-century Rif Fort, now housing a shopping center. City restaurants serve dishes influenced by the island's mostly Dutch and Afro-Caribbean cuisines.</p>
             <button type="button">Read More</button>
             <button type="button">fblike</button>
@@ -69,7 +91,18 @@
         <div class="travcontent">
             <p class="travtitle">Crystal's journey to the east</p>
             <p class="travdate">25 December 2016</p>
-            <img src="img/vietnam.jpg">
+            <img id="myImg3" src="img/vietnam.jpg">
+            <div id="myModal3" class="modal">
+
+                <!-- The Close Button -->
+                  <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
+
+                  <!-- Modal Content (The Image) -->
+                  <img class="modal-content" id="img03">
+
+                  <!-- Modal Caption (Image Text) -->
+                  <div id="caption3">ASD</div>
+                </div>
             <p class="travcaption">Terraced rice paddies ring the Vietnamese countryside in bright green. The crop, a staple of Southeast Asia, has been grown in Vietnam for thousands of years.</p>
             <button type="button">Read More</button>
             <button type="button">fblike</button>
@@ -79,6 +112,52 @@
 
 
 </body>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+var modal3 = document.getElementById('myModal3');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var img2 = document.getElementById('myImg2');
+var img3 = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var modalImg2 = document.getElementById("img02");
+var modalImg3 = document.getElementById("img03");
+var captionText = document.getElementById("caption");
+var captionText2 = document.getElementById("caption2");
+var captionText3 = document.getElementById("caption3");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img2.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+    captionText2.innerHTML = this.alt;
+}
+img3.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+    captionText2.innerHTML = this.alt;
+}
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close")[0];
+var span3 = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+span2.onclick = function() { 
+  modal.style.display = "none";
+}
+span3.onclick = function() { 
+  modal.style.display = "none";
+}
+
+</script>
 
 </html>
