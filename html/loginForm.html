@@ -35,19 +35,19 @@
                         if (result == 'success') {
                             // go to login page with the below message
                             //alert(message);
-                            $('#output').html(response.responseText)
-                            
+                            $('#output').html(message);
+
                         }
                         else {
                             // show error messages
                             //alert(message);
-                            $('#output').html(response.responseText);
+                            $('#output').html(message);
 
-                            
+
                         }
                     },
                     error: function (jXHR, textStatus, errorThrown) {
-                         //alert(errorThrown);
+                        //alert(errorThrown);
                         $('#output').html(response.responseText);
                     }
                 });
@@ -66,11 +66,11 @@
                         var message = response.message;
                         if (result == 'success') {
                             // go to login page with the below message
-                            alert(message);
+                            $('#output').html(message);
                         }
                         else {
                             // show error messages
-                            alert(message);
+                            $('#output').html(message);
                         }
                     },
                     error: function (jXHR, textStatus, errorThrown) {
@@ -85,7 +85,7 @@
 <div id="hero-banner" class="jumbotron container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <a href="index.html"><img class="logo" height="100" width="100" src="../img/logo.png"/></a>
+            <a href="../index.html"><img class="logo" height="100" width="100" src="../img/logo.png"/></a>
         </div>
         <div class="col-sm-9">
             <h1 class="display-3">Travel Now</h1>
@@ -160,33 +160,35 @@
                         <p class="button">
                             <input id="signup_button" type="submit" value="Sign up" name="submit"/>
                         </p>
-                       
+
                         <p class="change_link">
                             Already a member ?
                             <a href="#tologin" class="to_register">Sign in Here</a>
                         </p>
-                        
+
                     </form>
-                     
+
                 </div>
 
-                    <div style="border-right:medium #000 solid; height:500px;" />
-                    </div>
-
+                <div style="border-right:medium #000 solid; height:500px;"/>
             </div>
 
         </div>
-        <div class="col-sm-3">
-            <div class="pt" id="pt"></div>
 
-            <button type="button" role="button" class="btn btn-primary btn-block">Login with Facebook</button>
-           
-            <button type="button" role="button" class="btn btn-danger btn-block">Sign in with Google</button>
-            </div>
-        <div class="col-sm-2">
-        </div>
-        </section>
     </div>
+    <div class="col-sm-3">
+        <div class="pt" id="pt"></div>
+
+        <button type="button" role="button" class="btn btn-primary btn-block" onclick="window
+.location.href='../php/login.php?provider=Facebook'">Login with Facebook</button>
+
+        <button type="button" role="button" class="btn btn-danger btn-block" onclick="window
+.location.href='../php/login.php?provider=Google'">Sign in with Google</button>
+    </div>
+    <div class="col-sm-2">
+    </div>
+    </section>
+</div>
 
 </div>
 </div>
