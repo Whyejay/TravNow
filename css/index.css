@@ -204,6 +204,7 @@
 }
 .trend {
     margin-top: 30px;
+	margin-bottom: 50px;
     margin-left: 160px;
     background-color: azure;
     background-image: url(../img/trend.jpg);
@@ -217,4 +218,12 @@
     font-size:24px;
     color:black;
     margin-top:5px;
+}
+
+footer { 
+    display: block;
+	color: #14394f !important;
+    background-color: black!important;
+    padding: 40px;
+	
 }
