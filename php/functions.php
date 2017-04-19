@@ -119,7 +119,6 @@ function create_new_hybridauth_user($username, $email, $provider_name, $provider
 
     $insert = $db_connection->query($insertQuery);
 
-    $insert->close();
     $db_connection->close();
 
     return $insert;
