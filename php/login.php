@@ -31,6 +31,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $message = "Please check your login details";
     }
 
+    $action['message'] = $message;
+    echo json_encode($action);
+
 } else if (isset($_REQUEST['provider'])) {
     // the selected provider
     $provider_name = $_REQUEST["provider"];
@@ -109,10 +112,5 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 }
 
-// cookies
-
-
-$action['message'] = $message;
-echo json_encode($action);
 
 ?>
