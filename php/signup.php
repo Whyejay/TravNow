@@ -65,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         }
                     }
                 }
-                $insert->close();
                 $db_connection->close();
             }
         }

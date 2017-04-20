@@ -47,7 +47,7 @@ function get_user_by_username_and_password($username, $password)
 {
     $username = clear_spaces($username);
     $password = clear_spaces($password);
-    $result = True;
+    $user['exist'] = True;
     if ($username != '' && $password != '') {
 
         // connect database
@@ -59,27 +59,29 @@ function get_user_by_username_and_password($username, $password)
         $selectQuery = "SELECT * FROM user WHERE username = ?";
         $select = $db_connection->prepare($selectQuery);
         $select->bind_param('s', $username);
-        if ($select->execute())
+        if ($select->execute()) {
             $result = $select->get_result();
-        if ($result->num_rows != 0) {
-            $info = $result->fetch_assoc();
-            if ($info['active'] != '1') {
-                $result = False;
-            } else {
-                if (!password_verify($password, $info['password'])) {
-                    $result = False;
+            if ($result->num_rows != 0) {
+                $info = $result->fetch_assoc();
+                if ($info['active'] != '1') {
+                    $user['exist'] = False;
+                } else {
+                    if (password_verify($password, $info['password'])) {
+                        $user['info'] = $info;
+                    } else {
+                        $user['exist'] = False;
+                    }
                 }
             }
         } else {
-            $result = False;
+            $user['exist'] = False;;
         }
 
-        $select->close();
         $db_connection->close();
     } else {
-        $result = False;
+        $user['exist'] = False;
     }
-    return $result;
+    return $user;
 }
 
 function get_user_by_provider_and_id($provider_name, $provider_user_id)
@@ -93,7 +95,7 @@ function get_user_by_provider_and_id($provider_name, $provider_user_id)
     //process
     $selectQuery = "SELECT * FROM user WHERE hybridauth_provider_name = '$provider_name' AND hybridauth_provider_uid = '$provider_user_id'";
     $select = $db_connection->query($selectQuery);
-    if($select->num_rows == 0){
+    if ($select->num_rows == 0) {
         $result = False;
     }
 
@@ -119,9 +121,42 @@ function create_new_hybridauth_user($username, $email, $provider_name, $provider
 
     $insert = $db_connection->query($insertQuery);
 
-    $insert->close();
     $db_connection->close();
 
     return $insert;
 
+}
+
+function set_cookie($info){
+    $username = $info['username'];
+    $token = bin2hex(openssl_random_pseudo_bytes(16)); // random 128-bit token
+    $cookie = $username . ':' . $token;
+    $mac = hash_hmac('sha256', $cookie, SECRET_KEY);
+    $cookie .= ':' . $mac;
+    setcookie('remember_me', $cookie);
+}
+
+function confirm_cookie($cookie){
+    list ($username, $token, $mac) = explode(':', $cookie);
+    return hash_equals(hash_hmac('sha256', $username . ':' . $token, SECRET_KEY), $mac);
+}
+
+function check_logged(){
+    session_start();
+    $result = False;
+    if (isset($_SESSION['username'])){
+        $result = True;
+    }
+    else{
+        if (isset($_COOKIE['remember_me'])){
+            $cookie = $_COOKIE['remember_me'];
+            require_once 'functions.php';
+            if (confirm_cookie($cookie)){
+                $username = explode(':', $cookie)[0];
+                $_SESSION['username'] = $username;
+                $result = True;
+            }
+        }
+    }
+    return $result;
 }

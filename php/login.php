@@ -4,19 +4,35 @@ include_once 'functions.php';
 $action = array();
 $action['result'] = null;
 $message = '';
+
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $user_exist = get_user_by_username_and_password($username, $password);
+    $user = get_user_by_username_and_password($username, $password);
 
-    if ($user_exist) {
+    if ($user['exist']) {
+
         $action['result'] = 'success';
         $message = "Login successfully";
+
+        // session
+        session_start();
+        $_SESSION['username'] = $username;
+
+        // cookies
+        if (isset($_REQUEST['remember_me'])) {
+            require_once 'functions.php';
+            $info = $user['info'];
+            set_cookie($info);
+        }
 
     } else {
         $action['result'] = 'error';
         $message = "Please check your login details";
     }
+
+    $action['message'] = $message;
+    echo json_encode($action);
 
 } else if (isset($_REQUEST['provider'])) {
     // the selected provider
@@ -36,6 +52,23 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         // then grab the user profile
         $user_profile = $adapter->getUserProfile();
+
+        $user_exist = get_user_by_provider_and_id($provider_name, $user_profile->identifier);
+
+        if (!$user_exist) {
+            $insert = create_new_hybridauth_user(
+                $user_profile->displayName,
+                $user_profile->email,
+                $provider_name,
+                $user_profile->identifier
+            );
+            if ($insert) {
+                // session
+                session_start();
+                $_SESSION['username'] = $user_profile->displayName;
+                header('Location: ../http://localhost/project/html/pause.html');
+            }
+        }
 
     } catch (Exception $e) {
         switch ($e->getCode()) {
@@ -76,23 +109,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     }
 
-    $user_exist = get_user_by_provider_and_id( $provider_name, $user_profile->identifier );
-
-    if(!$user_exist )
-    {
-        create_new_hybridauth_user(
-            $user_profile->displayName,
-            $user_profile->email,
-            $provider_name,
-            $user_profile->identifier
-        );
-        echo "SUCCESS";
-    }
-
 
 }
 
-$action['message'] = $message;
-echo json_encode($action);
 
 ?>
