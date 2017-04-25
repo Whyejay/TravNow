@@ -1,0 +1,125 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: azure;
+    z-index: 9999;
+    border: 0;
+    font-size: 15px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 0.2px;
+    border-radius: 0;
+    font-family: helvetica;
+    font-weight: bold;
+    overflow:visible;
+    min-height:50px;
+
+}
+
+.navbar-brand>img {
+    max-height: 120%;
+    height: 120%;
+    width: auto;
+
+
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: #14394f !important;
+    background-color: #8db9d3!important;
+    text-decoration: none;
+}
+
+.navbar ul{
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+
+.navbar ul li{
+    float:left; 
+    position:relative;
+    background-color: azure;
+}
+.navbar ul li a
+{
+    color:#000; 
+    display:block; 
+    font-family:'helvetica'; 
+    font-size:15px; 
+    padding:18px 18.7px;
+
+}
+
+.navbar ul li a:hover
+{
+    background:#CF0000;
+}
+
+/* dropdown css */
+.navbar ul li ul{
+  
+     top:100px; position:absolute;
+      width:215px; 
+      z-index:99999; 
+      right:-99999px;
+
+
+  }
+
+.navbar ul li ul li{
+    float:none; 
+    position:relative;
+    border-left: 3px solid black;
+
+}   
+
+.navbar ul >li:hover >ul
+{
+    left:0px; 
+    top:49px;
+
+
+}
+.navbar ul li ul li a
+{
+    font-family:helvetica; 
+    font-weight:bold;
+
+
+}
+
+.navbar ul li ul li a:hover{
+
+}
+.container-fluid {
+    background-color: azure;
+}
+.jumbotron {
+    height: 100%;
+    margin-bottom: 0px;
+    background-color: azure;
+    background-image: url(../img/);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:100%;
+
+}
+
+.jumbotron h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+.jumbotron a:hover {
+    text-decoration: none;
+
+}
+
+.jumbotron p {
+    font-size: 18px;
+}
+
+.content {
+    margin-left:200px;
+    margin-right:300px;
+}
