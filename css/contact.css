@@ -94,15 +94,15 @@
 .container-fluid {
     background-color: azure;
 }
-.jumbotron {
+.jumbotron {    
     height: 100%;
     margin-bottom: 0px;
+    margin-top:49px;
     background-color: azure;
-    background-image: url(../img/);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width:100%;
+    width:80%;
 
 }
 
