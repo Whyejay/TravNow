@@ -95,14 +95,14 @@
     background-color: azure;
 }
 .jumbotron {    
-    height: 100%;
+    height: 100vh;
     margin-bottom: 0px;
     margin-top:49px;
     background-color: azure;
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width:80%;
+    width:100%;
 
 }
 
@@ -120,6 +120,6 @@
 }
 
 .content {
-    margin-left:200px;
-    margin-right:300px;
+    margin-left:375px;
+    margin-right:375px;
 }

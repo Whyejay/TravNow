@@ -130,8 +130,8 @@ input[type=text]:focus {
 }
 
 .content {
-    margin-left:200px;
-    margin-right:300px;
+    margin-left:300px;
+    margin-right:400px;
 }
 
 .travcontent .travtitle {
@@ -193,7 +193,7 @@ input[type=text]:focus {
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
+    color: #fff;
     padding: 10px 0;
     height: 150px;
 }
