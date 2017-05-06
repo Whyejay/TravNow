@@ -1,6 +1,9 @@
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/nav.css">
-<nav class="navbar navbar-default navbar-fixed-top">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="./index.php"><img src="./img/logo.png" alt="Logo Picture"></a>
@@ -8,15 +11,15 @@
         <ul class="nav navbar-nav">
             <li class="home"><a href="./index.php">Home</a></li>
             <li><a href="#about">About</a>
-
             </li>
-            <li><a href="./html/travel.html">Travel</a>
-                <ul>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Travel <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Australia</a></li>
                     <li><a href="#">Brazil</a></li>
-                    <li><a href="#">China</a></li>
-                    <li><a href="#">Denmark</a></li>
-                    <li><a href="#">Egypt</a></li>
+                    <li><a href="#">Spain</a></li>
+                    <li><a href="#">Thailand</a></li>
+                    <li><a href="#">Singapore</a></li>
                 </ul>
             </li>
             <li><a href="./html/activity.html">Activities</a></li>
@@ -33,11 +36,11 @@
                             <div class="col-md-12">
                                 Login via
                                 <div class="social-buttons">
-                                    <a href="./php/login.php?provider=Facebook" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
-                                    <a href="./php/login.php?provider=Google" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
+                                    <a href="./php/login.php?provider=Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                    <a href="./php/login.php?provider=Google" class="btn btn-gg"><i class="fa fa-google"></i> Google</a>
                                 </div>
                                 or
-                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                <form class="form" role="form" method="post" action="./php/login.php" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                         <label for="username" class="username" data-icon="u"> Your Email or Username </label>
                                         <input id="username" name="username" required="required" type="text"
@@ -68,3 +71,4 @@
         </ul>
     </div>
 </nav>
+</body>

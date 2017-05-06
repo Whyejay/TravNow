@@ -1,22 +1,40 @@
+/*.navbar {*/
+/*margin-bottom: 0;*/
+/*z-index: 9999;*/
+/*border: 0;*/
+/*font-size: 15px !important;*/
+/*line-height: 1.42857143 !important;*/
+/*letter-spacing: 0.2px;*/
+/*border-radius: 0;*/
+/*font-family: helvetica;*/
+/*font-weight: bold;*/
+/*overflow:visible;*/
+/*min-height:50px;*/
+
+/*}*/
+
+.navbar-brand>img {
+max-height: 120%;
+height: 120%;
+width: auto;
+}
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
     overflow:hidden;
-    background-color: white;
-    opacity: 70%;
+    background-color:rgba(255,255,255,.8);
 }
 #login-dp .help-block{
-    font-size:12px    
+    font-size:12px
 }
 #login-dp .bottom{
-    background-color: white;
-    opacity: 70%;
+    background-color:rgba(255,255,255,.8);
     border-top:1px solid #ddd;
     clear:both;
     padding:14px;
 }
 #login-dp .social-buttons{
-    margin:12px 0    
+    margin:12px 0
 }
 #login-dp .social-buttons a{
     width: 49%;
@@ -24,19 +42,19 @@
 #login-dp .form-group {
     margin-bottom: 10px;
 }
-.btn-facebook{
+.btn-fb{
     color: #fff;
     background-color:#3b5998;
 }
-.btn-facebook:hover{
+.btn-fb:hover{
     color: #fff;
-    background-color:#496ebc; 
+    background-color:#496ebc
 }
-.btn-google{
+.btn-gg{
     color: #fff;
     background-color:#db4437;
 }
-.btn-google:hover{
+.btn-gg:hover{
     color: #fff;
     background-color:#e9635b;
 }
@@ -50,3 +68,4 @@
         border-top:0 none;
     }
 }
+
