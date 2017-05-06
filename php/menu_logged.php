@@ -1,3 +1,8 @@
+<html lang="en">
+<head>
+
+</head>
+<body>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -61,3 +66,4 @@
         </ul>
     </div>
 </nav>
+</body>

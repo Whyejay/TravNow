@@ -53,7 +53,7 @@ function get_user_by_username_and_password($username, $password)
         // connect database
         include_once('connectMySQL.php');
         $database = new MySQLDatabase();
-        $db_connection = $database->connect('root', 'KhoaUQ95', 'database_infs3202');
+        $db_connection = $database->connect();
 
         // process
         $selectQuery = "SELECT * FROM user WHERE username = ?";
@@ -90,7 +90,7 @@ function get_user_by_provider_and_id($provider_name, $provider_user_id)
     // connect database
     include_once('connectMySQL.php');
     $database = new MySQLDatabase();
-    $db_connection = $database->connect('root', 'KhoaUQ95', 'database_infs3202');
+    $db_connection = $database->connect();
 
     //process
     $selectQuery = "SELECT * FROM user WHERE hybridauth_provider_name = '$provider_name' AND hybridauth_provider_uid = '$provider_user_id'";
@@ -114,7 +114,7 @@ function create_new_hybridauth_user($username, $email, $provider_name, $provider
     // connect database
     include_once('connectMySQL.php');
     $database = new MySQLDatabase();
-    $db_connection = $database->connect('root', 'KhoaUQ95', 'database_infs3202');
+    $db_connection = $database->connect();
 
     $insertQuery = "INSERT INTO user (username, email, password,active, hybridauth_provider_name, hybridauth_provider_uid)
                     VALUES ('$username', '$email', '$password', 1, '$provider_name', '$provider_user_id')  ";

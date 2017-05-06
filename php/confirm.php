@@ -20,7 +20,7 @@ if ($action['result'] != 'error') {
 
     //connect database
     $database = new MySQLDatabase();
-    $db_connection = $database->connect('root', 'KhoaUQ95', 'database_infs3202');
+    $db_connection = $database->connect();
 
     //check if the key is in the database
     $check_key = $db_connection->query("SELECT * FROM confirm WHERE email = '$email' AND key_confirm = '$key' LIMIT 1");

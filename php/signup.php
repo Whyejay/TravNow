@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 //valid format - connect database
                 $database = new MySQLDatabase();
-                $db_connection = $database->connect('root', 'KhoaUQ95', 'database_infs3202');
+                $db_connection = $database->connect();
 
                 //insert data
                 $insertQuery = "INSERT INTO user(username, password, email ) VALUES (? , ?, ?)";

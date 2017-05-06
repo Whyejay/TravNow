@@ -1,6 +1,43 @@
 <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
     <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Sign up
+            $('#login_form').on('submit', function (e) {
+                e.preventDefault();
+                alert($(this).serialize());
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: $(this).attr('method'),
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function (response) {
+                        var result = response.result;
+                        var message = response.message;
+                        if (result == 'success') {
+                            // go to login page with the below message
+                            alert(message);
+//                            $('#output').html(message);
+
+                        }
+                        else {
+                            // show error messages
+                            alert(message);
+//                            $('#output').html(message);
+
+
+                        }
+                    },
+                    error: function (jXHR, textStatus, errorThrown) {
+                        //alert(errorThrown);
+                        $('#output').html(response.responseText);
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -40,15 +77,15 @@
                                     <a href="./php/login.php?provider=Google" class="btn btn-gg"><i class="fa fa-google"></i> Google</a>
                                 </div>
                                 or
-                                <form class="form" role="form" method="post" action="./php/login.php" accept-charset="UTF-8" id="login-nav">
+                                <form id="login_form" class="form" role="form" method="post" action="./php/login.php" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                         <label for="username" class="username" data-icon="u"> Your Email or Username </label>
                                         <input id="username" name="username" required="required" type="text"
                                                placeholder="Email or Username"/>
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                        <label class="sr-only" for="password">Password</label>
+                                        <input type="password" name ="password" class="form-control" id="password" placeholder="Password" required>
                                         <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                     </div>
                                     <div class="form-group">
@@ -56,10 +93,11 @@
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox"> Remember me
+                                            <input type="checkbox" name="remember_me"> Remember me
                                         </label>
                                     </div>
                                 </form>
+                                <div id="output"></div>
                             </div>
                             <div class="bottom text-center">
                                 New here ? <a href="./html/signupForm.html"><b>Join Us</b></a>
