@@ -39,8 +39,8 @@ require_once 'php/check_logging.php';
                 <div id="caption"></div>
             </div>
             <p class="travcaption">Point Reyes National Seashore is a 71,028-acre park preserve located on the Point Reyes Peninsula in Marin County, California. As a national seashore, it is maintained by the US National Park Service as an important nature preserve.</p>
-            <button type="button">Read More</button>
-            <button type="button">fblike</button>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
 
             <div class="travcontent">
@@ -59,8 +59,8 @@ require_once 'php/check_logging.php';
                     <div id="caption2"></div>
                 </div>
                 <p class="travcaption">Willemstad is the capital city of Curaçao, a Dutch Caribbean island. It’s known for its old town center, with pastel-colored colonial architecture. The floating Queen Emma Bridge connects the Punda and Otrobanda neighborhoods across Sint Anna Bay. By the water is the 19th-century Rif Fort, now housing a shopping center. City restaurants serve dishes influenced by the island's mostly Dutch and Afro-Caribbean cuisines.</p>
-                <button type="button">Read More</button>
-                <button type="button">fblike</button>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                        width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
 
             <hr>
@@ -80,8 +80,8 @@ require_once 'php/check_logging.php';
                     <div id="caption3"></div>
                 </div>
                 <p class="travcaption">Terraced rice paddies ring the Vietnamese countryside in bright green. The crop, a staple of Southeast Asia, has been grown in Vietnam for thousands of years.</p>
-                <button type="button">Read More</button>
-                <button type="button">fblike</button>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                        width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
         </div>
     </div>

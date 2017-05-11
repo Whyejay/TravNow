@@ -38,8 +38,8 @@ require_once 'php/check_logging.php';
                 <div id="caption"></div>
             </div>
             <p class="eatcaption">Experience everything that is unique about Richmond at our Rocketts Landing location: a vibrant city among luscious greenery and calming water. Not to mention expertly prepared local seafood, pizza, and more.</p>
-            <button type="button">Read More</button>
-            <button type="button">fblike</button>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
         <hr>
         <div class="eatcontent">
@@ -58,8 +58,8 @@ require_once 'php/check_logging.php';
                 <div id="caption2"></div>
             </div>
             <p class="eatcaption">Don’t let the name fool you. Chicken Institute is not a chicken-only butcher in your local shopping centre, nor is it a school for poultry upskilling. It’s a Korean restaurant on Fitzroy Street serving up the surprisingly excellent combination of fried chicken in buckets, bibimbaps and milkshakes.</p>
-            <button type="button">Read More</button>
-            <button type="button">fblike</button>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
         <hr>
         <div class="eatcontent">
@@ -79,8 +79,8 @@ require_once 'php/check_logging.php';
             </div>
             <p class="eatcaption">A decade and a half since its arrival transformed Sydney's understanding of high-end Thai cuisine, Longrain remains a buzzing destination stalwart on the local dining scene. It isn’t hard to see why. The interior is fun but fancy enough, the service warm and accommodating. And the food? Well, after a long-overdue return visit, we can tell you Longrain is still kicking ass in that department, too.
             </p>
-            <button type="button">Read More</button>
-            <button type="button">fblike</button>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
     </div>
 </div>
