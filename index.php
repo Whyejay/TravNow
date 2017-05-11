@@ -1,3 +1,6 @@
+<?php
+require_once 'php/check_logging.php';
+?>
 <html lang="en">
 <head>
     <title>TravelNow</title>
@@ -7,20 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<?php
-define('SECRET_KEY', 'KhoaUQ_95');
-include_once 'php/functions.php';
-$logged = check_logged();
-if ($logged){
-    include_once 'php/menu_logged.php';
-}
-else{
-    include_once 'php/menu_unlogged.php';
-}
-?>
+
 <div class="jumbotron text-center img-responsive container-fluid">
     <a href="#"><h1>Going Places</h1></a>
     <p>To travel is to live</p>
@@ -30,14 +22,14 @@ else{
     <div class="row text-center slideanim">
 
         <div class="travel text-center img-responsive container-fluid col-sm-4">
-            <a href="./html/travel.html"><h2>Travel</h2></a>
+            <a href="travel.php"><h2>Travel</h2></a>
 
         </div>
         <div class="eat text-center img-responsive container-fluid col-sm-4">
-            <a href="./html/eat.html"><h2>Savour</h2></a>
+            <a href="eat.php"><h2>Savour</h2></a>
         </div>
         <div class="relax text-center img-responsive container-fluid col-sm-4">
-            <a href="./html/activity.html"><h2>Activity</h2></a>
+            <a href="activity.php"><h2>Activity</h2></a>
         </div>
     </div>
 

@@ -47,7 +47,7 @@ if ($action['result'] != 'error') {
         $action['result'] = 'error';
         $action['message'] = 'The key and email is not in our database.';
     }
-
+    $database->disconnect();
 }
 
 echo json_encode($action); ?>
