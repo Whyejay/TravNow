@@ -25,7 +25,7 @@ require_once 'php/check_logging.php';
         <div class="actcontent">
             <p class="acttitle">Fishing @ The Sand Pumping Jetty</p>
             <p class="actdate">07 April 2017</p>
-            <img id="myImg" src="../img/fishing.jpg" alt="Sand Pumping Jetty @ Gold Coast Seaway">
+            <img id="myImg" src="img/fishing.jpg" alt="Sand Pumping Jetty @ Gold Coast Seaway">
             <div id="myModal" class="modal">
 
                 <!-- The Close Button -->
@@ -45,7 +45,7 @@ require_once 'php/check_logging.php';
         <div class="actcontent">
             <p class="acttitle">Sky Diving</p>
             <p class="actdate">06 November 2016</p>
-            <img id="myImg2" src="../img/skydive.jpg" alt="Sky Diving @ Byron Bay">
+            <img id="myImg2" src="img/skydive.jpg" alt="Sky Diving @ Byron Bay">
             <div id="myModal2" class="modal2">
 
                 <!-- The Close Button -->
@@ -65,7 +65,7 @@ require_once 'php/check_logging.php';
         <div class="actcontent">
             <p class="acttitle">Surfing @ Gold Coast Surf School</p>
             <p class="actdate">02 November 2016</p>
-            <img id="myImg3" src="../img/surfing.jpg" alt="Learn surfing on Australian waters">
+            <img id="myImg3" src="img/surfing.jpg" alt="Learn surfing on Australian waters">
             <div id="myModal3" class="modal3">
 
                 <!-- The Close Button -->

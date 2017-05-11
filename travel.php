@@ -26,7 +26,7 @@ require_once 'php/check_logging.php';
         <div class="travcontent">
             <p class="travtitle">The Adventures of Nicholas</p>
             <p class="travdate">13 April 2017</p>
-            <img id="myImg" src="../img/pointreyes.jpg" alt="Point Reyes, California">
+            <img id="myImg" src="img/pointreyes.jpg" alt="Point Reyes, California">
             <div id="myModal" class="modal">
 
                 <!-- The Close Button -->
@@ -46,7 +46,7 @@ require_once 'php/check_logging.php';
             <div class="travcontent">
                 <p class="travtitle">Sebastian's travelogue</p>
                 <p class="travdate">12 March 2017</p>
-                <img id="myImg2" src="../img/curacao.jpg" alt="Curacao, Netherlands">
+                <img id="myImg2" src="img/curacao.jpg" alt="Curacao, Netherlands">
                 <div id="myModal2" class="modal2">
 
                     <!-- The Close Button -->
@@ -67,7 +67,7 @@ require_once 'php/check_logging.php';
             <div class="travcontent">
                 <p class="travtitle">Crystal's journey to the east</p>
                 <p class="travdate">25 December 2016</p>
-                <img id="myImg3" src="../img/vietnam.jpg" alt="Sapa, Vietnam">
+                <img id="myImg3" src="img/vietnam.jpg" alt="Sapa, Vietnam">
                 <div id="myModal3" class="modal3">
 
                     <!-- The Close Button -->
@@ -98,7 +98,7 @@ require_once 'php/check_logging.php';
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 footer-col">
-                    <div class="logofooter"> <a href="index.html"><img src="../img/logo.png" alt="logo" style="width:35px;height:35px;"></a>
+                    <div class="logofooter"> <a href="index.php"><img src="img/logo.png" alt="logo" style="width:35px;height:35px;"></a>
                     </div>
                     <p>TravNow is a place to share your travelling experiences with peple all over the globe. You could also find out some 'secret' places that not many have visited before. Stay updated and trav now!</p>
                     <p><i class="fa fa-phone"></i> Phone (Australia) : +61 123 456 789</p>

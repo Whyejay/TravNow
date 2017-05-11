@@ -25,7 +25,7 @@ require_once 'php/check_logging.php';
         <div class="eatcontent">
             <p class="eattitle">The Boathouse at Rocketts Landing</p>
             <p class="eatdate">19 May 2016</p>
-            <img id="myImg" src="../img/eat1.jpg" alt="The Boathouse at Rocketts Landing, 4708 Old Main St, Richmond, VA 23231, USA">
+            <img id="myImg" src="img/eat1.jpg" alt="The Boathouse at Rocketts Landing, 4708 Old Main St, Richmond, VA 23231, USA">
             <div id="myModal" class="modal">
 
                 <!-- The Close Button -->
@@ -45,7 +45,7 @@ require_once 'php/check_logging.php';
         <div class="eatcontent">
             <p class="eattitle">Chicken Institute</p>
             <p class="eatdate">24 March 2016</p>
-            <img id="myImg2" src="../img/eat2.jpg" alt="Chicken Institute, 61 Fitzroy St, Surry Hills NSW 2010">
+            <img id="myImg2" src="img/eat2.jpg" alt="Chicken Institute, 61 Fitzroy St, Surry Hills NSW 2010">
             <div id="myModal2" class="modal2">
 
                 <!-- The Close Button -->
@@ -65,7 +65,7 @@ require_once 'php/check_logging.php';
         <div class="eatcontent">
             <p class="eattitle">Longrain</p>
             <p class="eatdate">22 March 2016</p>
-            <img id="myImg3" src="../img/eat3.jpg" alt="Longrain, 40-44 Little Bourke St Melbourne, VIC 3000">
+            <img id="myImg3" src="img/eat3.jpg" alt="Longrain, 40-44 Little Bourke St Melbourne, VIC 3000">
             <div id="myModal3" class="modal3">
 
                 <!-- The Close Button -->
