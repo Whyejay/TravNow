@@ -57,9 +57,6 @@ require_once 'php/check_logging.php';
     <br>
     <br>
     <br>
-    <br>
-    <br>
-
 
     <footer>
         <div class="container">
