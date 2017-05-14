@@ -83,18 +83,12 @@ require_once 'php/check_logging.php';
         </div>
 
     </div>
-</div
-
-​    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <footer>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 footer-col">
@@ -151,7 +145,12 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
+</div>
+
 </body>
+
+
+
 <script>
     // Get the modal
     var modal = document.getElementById('myModal');
@@ -199,5 +198,6 @@ require_once 'php/check_logging.php';
     }
 
 </script>
+
 
 </html>

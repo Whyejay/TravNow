@@ -83,18 +83,12 @@ require_once 'php/check_logging.php';
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
     </div>
-</div>
-
-​    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <footer>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 footer-col">
@@ -151,6 +145,8 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
+</div>
+
 	
 </body>
 <script>
