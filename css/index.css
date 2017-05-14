@@ -215,8 +215,15 @@
     background-repeat: no-repeat;
     height:450px;
 }
-.trendtext p {
-    font-size:24px;
+.trendtext{
+    margin-top:30px;
+    margin-bottom: 50px;
+    height:450px;
+}
+#btnReadmore {
+    position: absolute;
+    right:0;
+    bottom:0;
 }
 .bottom p {
     font-family:Helvetica;
