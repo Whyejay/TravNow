@@ -37,15 +37,18 @@ require_once 'php/check_logging.php';
 <div class="bottom text-center container-fluid bg-grey">
     <p>#1 Trending Place</p>
     <hr></hr>
-    <div class="trend text-center img-responsive container-fluid col-sm-10">
+    <div class="trend text-center img-responsive container-fluid col-sm-6">
     </div>
-    <div class="trend2 text-center img-responsive container-fluid col-sm-10">
+    <div class="trendtext text-center container-fluid col-sm-4">
+    <p>The Sydney Harbour Bridge, also affectionately known as the 'Coathanger', was opened on March 19th 1932 by Premier Jack Lang, after six years of construction. Made of steel the bridge contains 6 million hand driven rivets. The surface area that requires painting is equal to about the surface area of 60 sports fields. The Bridge has huge hinges to absorb the expansion caused by the hot Sydney sun. You will see them on either side of the bridge at the footings of the Pylons.</p>
     </div>
-    <div class="trend3 text-center img-responsive container-fluid col-sm-10">
+    <div class="trend2 text-center img-responsive container-fluid col-sm-6">
     </div>
-    <div class="trend4 text-center img-responsive container-fluid col-sm-10">
+    <div class="trend3 text-center img-responsive container-fluid col-sm-6">
     </div>
-    <div class="trend5 text-center img-responsive container-fluid col-sm-10">
+    <div class="trend4 text-center img-responsive container-fluid col-sm-6">
+    </div>
+    <div class="trend5 text-center img-responsive container-fluid col-sm-6">
     </div>
 </div>
 
