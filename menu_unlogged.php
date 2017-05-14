@@ -58,8 +58,7 @@
             <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Pause</a></li>
-            <li><p class="navbar-text">Already have an account?</p></li>
+            <li id = "post_button"><a href="#">Create a postt</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
