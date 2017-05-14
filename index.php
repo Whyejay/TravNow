@@ -39,6 +39,14 @@ require_once 'php/check_logging.php';
     <hr></hr>
     <div class="trend text-center img-responsive container-fluid col-sm-10">
     </div>
+    <div class="trend2 text-center img-responsive container-fluid col-sm-10">
+    </div>
+    <div class="trend3 text-center img-responsive container-fluid col-sm-10">
+    </div>
+    <div class="trend4 text-center img-responsive container-fluid col-sm-10">
+    </div>
+    <div class="trend5 text-center img-responsive container-fluid col-sm-10">
+    </div>
 </div>
 
 ​    <br>

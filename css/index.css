@@ -171,6 +171,49 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height:450px;
+}.trend2 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 160px;
+    background-color: azure;
+    background-image: url(../img/trend2.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:450px;
+}
+.trend3 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 160px;
+    background-color: azure;
+    background-image: url(../img/trend3.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:450px;
+}
+.trend4 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 160px;
+    background-color: azure;
+    background-image: url(../img/trend4.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:450px;
+}
+.trend5 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 160px;
+    background-color: azure;
+    background-image: url(../img/trend5.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:450px;
 }
 .bottom p {
     font-family:Helvetica;
