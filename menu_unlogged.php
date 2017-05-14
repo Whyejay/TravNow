@@ -56,6 +56,7 @@
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+			<li><button type="button">Button</button></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><p class="navbar-text">Already have an account?</p></li>
