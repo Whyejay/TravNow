@@ -86,7 +86,6 @@ function get_user_by_username_and_password($username, $password)
 
 function get_user_by_provider_and_id($provider_name, $provider_user_id)
 {
-    $result = True;
     // connect database
     require_once 'connectMySQL.php';
     $database = new MySQLDatabase();
@@ -95,22 +94,15 @@ function get_user_by_provider_and_id($provider_name, $provider_user_id)
     //process
     $selectQuery = "SELECT * FROM user WHERE oath_provider = '$provider_name' AND oath_id = '$provider_user_id'";
     $select = $db_connection->query($selectQuery);
-    if ($select->num_rows == 0) {
-        $result = False;
-    }
-
-    $select->close();
     $database->disconnect();
-
-    return $result;
+    return $select;
 
 }
 
 function create_new_user($username, $email, $picture, $provider_name, $provider_id)
 {
     // Generate a random password
-    $random_password = random_string();
-    $password = password_hash($random_password, PASSWORD_DEFAULT);
+    $password = password_hash(random_string(), PASSWORD_DEFAULT);
     // connect database
     require_once 'connectMySQL.php';
     $database = new MySQLDatabase();
@@ -120,6 +112,7 @@ function create_new_user($username, $email, $picture, $provider_name, $provider_
     $insertQuery = "INSERT INTO user (username, password, email,active, picture, oath_provider, oath_id)
                     VALUES ('$username', '$password', '$email', 1, '$picture', '$provider_name', '$provider_id')  ";
     $db_connection->query($insertQuery);
+    $_SESSION['id'] = $db_connection->insert_id;
     $database->disconnect();
 }
 
@@ -184,4 +177,17 @@ function random_string()
     }
     $password = implode('|', $pass);
     return $password;
+}
+
+function create_new_post($user_id, $username, $title, $content)
+{
+    // connect database
+    require_once 'connectMySQL.php';
+    $database = new MySQLDatabase();
+    $db_connection = $database->connect();
+
+    //insert
+    $insertQuery = "INSERT INTO post(user_id,user_username, title, content) VALUES ('$user_id','$username', '$title', '$content')";
+    $db_connection->query($insertQuery);
+    $database->disconnect();
 }
