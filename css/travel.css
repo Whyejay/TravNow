@@ -102,13 +102,11 @@ input[type=text]:focus {
     width: 100%;
 }
 .container-fluid {
-    background-color: azure;
+    background-color: white;
 }
 .jumbotron {
     height: 100%;
     margin-bottom: 0px;
-    background-color: azure;
-    background-image: url(../img/);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
