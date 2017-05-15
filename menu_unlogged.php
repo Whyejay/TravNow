@@ -1,6 +1,6 @@
 <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/menu_unlogged.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="js/facebook.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -8,7 +8,6 @@
             // Normal login
             $('#login_form').on('submit', function (e) {
                 e.preventDefault();
-                alert($(this).serialize());
                 $.ajax({
                     url: $(this).attr('action'),
                     type: $(this).attr('method'),
@@ -58,7 +57,6 @@
             <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li id = "post_button"><a href="#">Create a post</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
@@ -66,7 +64,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 Login via
-                                <div class="social-buttons">
+                                <div class="social-buttons"``>
                                     <a class="btn btn-fb" id="facebook_button"><i
                                                 class="fa fa-facebook"></i> Facebook</a>
                                     <a href="php/google_login.php" class="btn btn-gg" id="google_button"><i

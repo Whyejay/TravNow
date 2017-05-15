@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/menu_logged.css">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -62,6 +63,7 @@
                     <li><a href="./php/logout.php">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                 </ul>
             </li>
+            <button type="button" class="btn btn-primary">Primary</button>
         </ul>
     </div>
 </nav>
