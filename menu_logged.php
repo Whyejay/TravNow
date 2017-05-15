@@ -13,19 +13,12 @@
             <li><a href="#about">About</a>
 
             </li>
-            <li><a href="travel.php">Travel</a>
-                <ul>
-                    <li><a href="#">Australia</a></li>
-                    <li><a href="#">Brazil</a></li>
-                    <li><a href="#">China</a></li>
-                    <li><a href="#">Denmark</a></li>
-                    <li><a href="#">Egypt</a></li>
-                </ul>
-            </li>
+            <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
         </ul>
+        <button onclick="window.location.href='post.php'" id="post_button" type="button" class="btn btn-primary">Create new post</button>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -58,12 +51,13 @@
                     <li class="divider"></li>
                     <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
                     <li class="divider"></li>
-                    <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                    <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a>
+                    </li>
                     <li class="divider"></li>
-                    <li><a href="./php/logout.php">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                    <li><a href="./php/logout.php">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a>
+                    </li>
                 </ul>
             </li>
-            <button type="button" class="btn btn-primary">Primary</button>
         </ul>
     </div>
 </nav>
