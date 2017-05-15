@@ -41,6 +41,29 @@
             });
         });
     </script>
+    <script>
+            function showResult(str) {
+              if (str.length==0) { 
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
+              }
+              if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+              } else {  // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange=function() {
+                if (this.readyState==4 && this.status==200) {
+                  document.getElementById("livesearch").innerHTML=this.responseText;
+                  document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                }
+              }
+              xmlhttp.open("GET","livesearch.php?q="+str,true);
+              xmlhttp.send();
+            }
+</script>
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -54,10 +77,10 @@
             <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+            <li><div class="glyphicon glyphicon-search"><input style="margin-top:10px;"type="text" size="30" onkeyup="showResult(this.value)"></div><div id="livesearch"></div></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-		<li button onclick="window.location.href='post.php'" id="post_button" type="button" style="top:7px" class="btn btn-primary">Create new post</button></li>
+		<li button onclick="window.location.href='html/signupForm.html#toregister'" id="post_button" type="button" style="top:7px" class="btn btn-primary">Create new post</button></li>
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
@@ -99,7 +122,7 @@
                                 <div id="output"></div>
                             </div>
                             <div class="bottom text-center">
-                                New here ? <a href="./html/signupForm.html"><b>Join Us</b></a>
+                                New here ? <a href="./html/signupForm.html#toregister"><b>Join Us</b></a>
                             </div>
                         </div>
                     </li>
