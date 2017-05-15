@@ -61,10 +61,10 @@ require_once 'php/check_logging.php';
 <div class="container">
     <form id="form" method="post" action="php/upload_new_post.php">
         <div class="form-group">
-            <table>
+            <table style="margin-top:100px;">
                 <tr>
                     <td>
-                        <label style="margin-right:15px" id="label" for="formTextarea">Title</label></td>
+                        <label style="margin-right:15px;" id="label" for="formTextarea">Title</label></td>
                     <td><input size="50" class="form-control" id="formTextarea"></input>
                     </td>
                 </tr>
