@@ -126,7 +126,7 @@ input[type=text]:focus {
 .jumbotron p {
     font-size: 18px;
 }
-
+/*
 .content {
     margin-left:300px;
     margin-right:400px;
@@ -140,13 +140,13 @@ input[type=text]:focus {
 
 .travcontent .travdate {
     font-size:15px;
-}
+}*/
 
-.travcontent .travcaption {
+/*.travcontent .travcaption {
     font-size:15px;
     margin-top:4px;
 }
-
+*/
 .travcontent img {
     height:450px;
     width:100%;
