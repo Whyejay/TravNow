@@ -16,9 +16,9 @@ require_once 'php/check_logging.php';
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <link rel="stylesheet" type="text/css" href="css/travel.css">
-
 <div class="jumbotron img-responsive container-fluid">
-    <div class="content">
+<div class="left col-md-1"></div>
+    <div class="content col-md-10">
         <h1>Travel</h1>
 
         <h3>Check here on the latest places to go!</h3>
@@ -84,6 +84,7 @@ require_once 'php/check_logging.php';
                         width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
         </div>
+        <div class="left col-md-1"></div>
     </div>
     <br>
     <br>
