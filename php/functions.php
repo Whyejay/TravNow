@@ -72,9 +72,11 @@ function get_user_by_username_and_password($username, $password)
                         $user['exist'] = False;
                     }
                 }
+            } else {
+                $user['exist'] = False;
             }
         } else {
-            $user['exist'] = False;;
+            $user['exist'] = False;
         }
 
         $db_connection->close();
@@ -134,8 +136,9 @@ function update_user_info($username, $email, $picture, $provider_name, $provider
 function set_cookie($info)
 {
     $username = $info['username'];
+    $user_id = $info['id'];
     $token = bin2hex(openssl_random_pseudo_bytes(16)); // random 128-bit token
-    $cookie = $username . ':' . $token;
+    $cookie = $username . '.' . $user_id . ':' . $token;
     $mac = hash_hmac('sha256', $cookie, 'KhoaUQ95');
     $cookie .= ':' . $mac;
     setcookie('remember_me', $cookie);
@@ -143,8 +146,8 @@ function set_cookie($info)
 
 function confirm_cookie($cookie)
 {
-    list ($username, $token, $mac) = explode(':', $cookie);
-    return hash_equals(hash_hmac('sha256', $username . ':' . $token, SECRET_KEY), $mac);
+    list ($data, $token, $mac) = explode(':', $cookie);
+    return hash_equals(hash_hmac('sha256', $data . ':' . $token, 'KhoaUQ95'), $mac);
 }
 
 function check_logged()
@@ -158,8 +161,11 @@ function check_logged()
             $cookie = $_COOKIE['remember_me'];
             require_once 'functions.php';
             if (confirm_cookie($cookie)) {
-                $username = explode(':', $cookie)[0];
+                $data = explode(':', $cookie)[0];
+                $username = explode('.', $data)[0];
+                $id = explode('.', $data)[1];
                 $_SESSION['username'] = $username;
+                $_SESSION['id'] = $id;
                 $result = True;
             }
         }
@@ -189,5 +195,21 @@ function create_new_post($user_id, $username, $title, $content)
     //insert
     $insertQuery = "INSERT INTO post(user_id,user_username, title, content) VALUES ('$user_id','$username', '$title', '$content')";
     $db_connection->query($insertQuery);
+    $id = $db_connection->insert_id;
     $database->disconnect();
+    return $id;
+}
+
+function get_post_by_id($post_id){
+    // connect database
+    require_once 'connectMySQL.php';
+    $database = new MySQLDatabase();
+    $db_connection = $database->connect();
+
+    //process
+    $selectQuery = "SELECT * FROM post WHERE post_id = '$post_id'";
+    $select = $db_connection->query($selectQuery);
+    $post = $select->fetch_assoc();
+    $database->disconnect();
+    return $post;
 }
