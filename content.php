@@ -19,7 +19,7 @@ $Parsedown = new Parsedown();
 $content = $Parsedown->text($content);
 ?>
 <div class="blog-header">
-    <div class="container">
+    <div class="container" style="margin-top:50px">
         <h1 id="title" class="blog-title"> <?php echo $title ?></h1>
         <p class="blog-post-meta">Posted by <a href="#"><?php echo $username ?></a></p>
     </div>
