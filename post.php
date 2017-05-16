@@ -31,22 +31,33 @@ require_once 'php/check_logging.php';
 
             $('#form').on('submit', function (e) {
                 var data_array = {};
-                data_array['username'] = "<?php session_start(); echo $_SESSION['username'] ?>";
+                data_array['username'] = "<?php echo $_SESSION['username'] ?>";
+                data_array['user_id'] = "<?php echo $_SESSION['id'] ?>";
                 data_array['title'] = $('#formTextarea').val();
                 data_array['content'] = $('#editor').val();
                 var data_json = JSON.stringify(data_array);
-
                 e.preventDefault();
                 $.ajax({
                     url: $(this).attr('action'),
                     type: $(this).attr('method'),
                     data: data_json,
-                    dataType: JSON,
+                    dataType: 'json',
                     success: function (response) {
-
+                        var result = response.result;
+                        var message = response.message;
+                        if (result == 'success') {
+                            alert(message);
+                            var post_id = response.id;
+                            window.location.replace("content.php?id=" + post_id);
+                            return false;
+                        }
+                        else {
+                            // show error messages
+                            alert(message);
+                        }
                     },
                     error: function (jXHR, textStatus, errorThrown) {
-
+                        alert(errorThrown);
                     }
                 });
             });

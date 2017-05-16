@@ -9,6 +9,14 @@ require_once 'php/check_logging.php';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on('scroll', function() {
+                if($(this).scrollTop()>=$('#post-data').position().top){
+                }
+            });
+        });
+    </script>
 </head>
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -37,29 +45,41 @@ require_once 'php/check_logging.php';
 <div class="container-fluid">
     <h2 class="text-center">Trending Places</h2>
     <br/>
-    <div class="row">
-        <div class="col-sm-4"><a href="#" class=""><img src="img/reyes1.jpg" class="img-responsive"></a>
+    <div class="container-fluid" id="post-data">
+        <div class="row">
+            <div class="col-sm-4"><a href="#" class=""><img src="img/reyes1.jpg" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-8">
+                <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
+                <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for Premium
+                    Members</p>
+                <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The concept
+                    is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long relied on
+                    artificial intelligence to detect fraudulent transaction patterns and prevent card.</p>
+
+                <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
+                <button id="btnReadmore" type="submit" class="btn btn-primary">Read More</button>
+            </div>
         </div>
-        <div class="col-sm-8">
-            <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
-            <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for Premium Members</p>
-            <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The concept is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long relied on artificial intelligence to detect fraudulent transaction patterns and prevent card.</p>
-
-            <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
-
+        <br>
+        <div class="row">
+            <div class="col-sm-4"><a href="#" class=""><img src="img/reyes2.jpg" class="img-responsive"></a>
+            </div>
+            <div class="col-sm-8">
+                <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach to
+                    Risk Management</h3>
+                <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
+                <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk
+                    increases year over year, the amount of data being collected increases as well.
+                </p>
+                <p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
+                <button id="btnReadmore" type="submit" class="btn btn-primary">Read More</button>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-4"><a href="#" class=""><img src="img/reyes2.jpg" class="img-responsive"></a>
-        </div>
-        <div class="col-sm-8">
-            <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach to Risk Management</h3>
-            <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
-            <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk increases year over year, the amount of data being collected increases as well.
-            </p><p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
 
-        </div>
+    <div class="ajax-load text-center" style="display:none">
+        <p><img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Loading More post</p>
     </div>
 </div>
 
