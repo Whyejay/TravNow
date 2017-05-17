@@ -1,6 +1,30 @@
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/menu_logged.css">
+    <script type="text/javascript">
+        function showResult(str) {
+            if (str.length == 0) {
+                $('#livesearch').innerHTML = "";
+                $('#livesearch').style.border = "0px";
+                return;
+            }
+            $.ajax({
+                url: 'php/livesearch.php?str=' + str,
+                type: "post",
+                dataType: 'json',
+                success: function (response) {
+                    $('#livesearch').empty();
+                    $.each(response, function () {
+                        $('#livesearch').append('<li><a href="content.php?id=' + this.id + '">' + this.title + '</a></li>');
+                    });
+                },
+                error: function (jXHR, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -16,7 +40,11 @@
             <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+            <li>
+                <div class="glyphicon glyphicon-search"><input style="margin-top:10px;" type="text" size="30"
+                                                               onkeyup="showResult(this.value)"></div>
+                <div id="livesearch"></div>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
 		<li button onclick="window.location.href='post.php'" id="post_button" type="button" style="top:4px" class="btn btn-primary">Create new post</button></li>
