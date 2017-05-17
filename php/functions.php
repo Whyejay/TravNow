@@ -141,13 +141,15 @@ function set_cookie($info)
     $cookie = $username . '.' . $user_id . ':' . $token;
     $mac = hash_hmac('sha256', $cookie, 'KhoaUQ95');
     $cookie .= ':' . $mac;
-    setcookie('remember_me', $cookie);
+    $domain = $_SERVER['HTTP_HOST'];
+    setcookie('remember_me', $cookie, time() + (86400 * 30), '/', $domain);
 }
 
 function confirm_cookie($cookie)
 {
     list ($data, $token, $mac) = explode(':', $cookie);
-    return hash_equals(hash_hmac('sha256', $data . ':' . $token, 'KhoaUQ95'), $mac);
+    $temp = hash_hmac('sha256', $data . ':' . $token, 'KhoaUQ95');
+    return $temp == $mac;
 }
 
 function check_logged()
@@ -159,7 +161,6 @@ function check_logged()
     } else {
         if (isset($_COOKIE['remember_me'])) {
             $cookie = $_COOKIE['remember_me'];
-            require_once 'functions.php';
             if (confirm_cookie($cookie)) {
                 $data = explode(':', $cookie)[0];
                 $username = explode('.', $data)[0];
@@ -200,7 +201,8 @@ function create_new_post($user_id, $username, $title, $content)
     return $id;
 }
 
-function get_post_by_id($post_id){
+function get_post_by_id($post_id)
+{
     // connect database
     require_once 'connectMySQL.php';
     $database = new MySQLDatabase();
@@ -212,4 +214,33 @@ function get_post_by_id($post_id){
     $post = $select->fetch_assoc();
     $database->disconnect();
     return $post;
+}
+
+function get_next_posts_by_id($last_id)
+{
+    $num_posts = 2;
+
+    // connect database
+    require_once 'connectMySQL.php';
+    $database = new MySQLDatabase();
+    $db_connection = $database->connect();
+
+    // process
+    $selectQuery = 'SELECT * FROM post WHERE post_id > ' . '$last_id' . ' ORDER BY post_id DESC LIMIT ' . '$num_posts';
+    $select = $db_connection->query($selectQuery);
+
+}
+
+function get_smallest_post_id()
+{
+    // connect database
+    require_once 'connectMySQL.php';
+    $database = new MySQLDatabase();
+    $db_connection = $database->connect();
+
+    //process
+    $selectQuery = "SELECT * FROM post ORDER BY post_id ASC";
+    $select = $db_connection->query($selectQuery);
+    $smallest_id = $select->fetch_assoc()['post_id'];
+    return $smallest_id;
 }
