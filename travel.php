@@ -84,7 +84,7 @@ require_once 'php/check_logging.php';
                         width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
         </div>
-        <div class="left col-md-1"></div>
+        <div class="right col-md-1"></div>
     </div>
     <br>
     <br>
