@@ -1,3 +1,4 @@
+<html>
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -44,6 +45,7 @@
             if (str.length == 0) {
                 $('#livesearch').innerHTML = "";
                 $('#livesearch').style.border = "0px";
+                $('#livesearch').empty();
                 return;
             }
             $.ajax({
@@ -135,3 +137,4 @@
     </div>
 </nav>
 </body>
+</html>

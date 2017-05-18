@@ -7,6 +7,7 @@
             if (str.length == 0) {
                 $('#livesearch').innerHTML = "";
                 $('#livesearch').style.border = "0px";
+                $('#livesearch').empty();
                 return;
             }
             $.ajax({
@@ -47,7 +48,8 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-		<li button onclick="window.location.href='post.php'" id="post_button" type="button" style="top:4px" class="btn btn-primary">Create new post</button></li>
+            <li button onclick="window.location.href='post.php'" id="post_button" type="button" style="top:4px"
+                class="btn btn-primary">Create new post</button></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-user"></span>
@@ -90,3 +92,4 @@
     </div>
 </nav>
 </body>
+</html>

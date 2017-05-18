@@ -1,11 +1,3 @@
-<head>
-    <title>TravelNow</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
 <?php
 require_once 'php/check_logging.php';
 require_once 'php/functions.php';
@@ -14,23 +6,70 @@ $post_id = $_REQUEST['id'];
 $post = get_post_by_id($post_id);
 $username = $post['user_username'];
 $title = $post['title'];
+$num_like = $post['num_like'];
 $content = $post['content'];
 $Parsedown = new Parsedown();
 $content = $Parsedown->text($content);
 ?>
+<html>
+<head>
+    <title>TravelNow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/content.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#like_button').click(function () {
+                $(this).toggleClass("not-liked liked");
+                var like = $(this).hasClass("liked");
+                var el = $('#num_like');
+                var num = parseInt(el.text());
+                var action = "";
+                if (like) {
+                    el.text(num + 1);
+                    action = "like";
+                }
+                else {
+                    el.text(num - 1);
+                    action = "unlike";
+                }
+                var data_array = {};
+                data_array['action'] = action;
+                data_array['post_id'] = <?php echo $post_id?>;
+                var data_json = JSON.stringify(data_array);
+                $.ajax({
+                    url: 'php/like_unlike.php',
+                    type: "post",
+                    data: data_json
+                });
+            });
+        });
+    </script>
+</head>
+<body>
 <div class="blog-header">
     <div class="container" style="margin-top:50px">
         <h1 id="title" class="blog-title"> <?php echo $title ?></h1>
         <p class="blog-post-meta">Posted by <a href="#"><?php echo $username ?></a></p>
     </div>
 </div>
+<hr>
 <div class="container">
     <div class="row">
+        <div class="col-sm-1">
+            <span class='toggle fa not-liked' id="like_button"></span>
+            </br>
+            <div style="display: inline; font-size:30px;" id="num_like"><?php echo $num_like ?></div>
+        </div>
         <div class="col-sm-8 blog-main">
-            <div id="content" class="blog-post"></div>
+            <!--            <div id="content" class="blog-post"></div>-->
             <?php echo $content ?>
         </div><!-- /.row -->
-
     </div><!-- /.container -->
 </div>
-
+</body>
+</html>
