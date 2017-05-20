@@ -42,10 +42,9 @@
             });
         });
         function showResult(str) {
+            var search_menu = $('#search-form').children('#livesearch');
             if (str.length == 0) {
-                $('#livesearch').innerHTML = "";
-                $('#livesearch').style.border = "0px";
-                $('#livesearch').empty();
+                search_menu.empty();
                 return;
             }
             $.ajax({
@@ -53,9 +52,9 @@
                 type: "post",
                 dataType: 'json',
                 success: function (response) {
-                    $('#livesearch').empty();
+                    search_menu.empty();
                     $.each(response, function () {
-                        $('#livesearch').append('<li><a href="content.php?id=' + this.id + '">' + this.title + '</a></li>');
+                        search_menu.append('<li><a href="content.php?id=' + this.id + '">' + this.title + '</a></li><hr>');
                     });
                 },
                 error: function (jXHR, textStatus, errorThrown) {
@@ -77,12 +76,17 @@
             <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
-            <li>
-                <div class="glyphicon glyphicon-search"><input style="margin-top:10px;" type="text" size="30"
-                                                               onkeyup="showResult(this.value)"></div>
-                <div id="livesearch"></div>
-            </li>
         </ul>
+        <div class="col-sm-3 col-md-3 pull-left">
+            <form class="navbar-form" role="search" id="search-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" onkeyup="showResult(this.value)">
+                </div>
+                <i class="glyphicon glyphicon-search"></i>
+                <div id="livesearch" class="dropdown-content">
+                </div>
+            </form>
+        </div>
         <ul class="nav navbar-nav navbar-right">
             <li button onclick="window.location.href='html/signupForm.html#toregister'" id="post_button" type="button"
                 style="top:7px" class="btn btn-primary">Create new post</button></li>
