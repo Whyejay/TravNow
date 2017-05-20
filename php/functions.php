@@ -24,13 +24,11 @@ function send_email_swift($info)
     $body_plain_txt = format_email($info, 'txt');
 
 //setup the mailer
-    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-        ->setUsername('duonganhkhoa95@gmail.com')
-        ->setPassword('KhoaUQ95');
+    $transport = Swift_SmtpTransport::newInstance('mailhub.eait.uq.edu.au', 25, 'tls');
     $mailer = Swift_Mailer::newInstance($transport);
     $message = Swift_Message::newInstance();
     $message->setSubject('Welcome to TravelNow');
-    $message->setFrom(array('duonganhkhoa95@gmail.com' => 'TravelNow'));
+    $message->setFrom(array('travnow@mailhub.eait.uq.edu.au' => 'TravelNow'));
     $message->setTo(array($info['email'] => $info['username']));
     $message->setBody($body_plain_txt);
     $message->addPart($body, 'text/html');
@@ -231,7 +229,7 @@ function get_next_posts_by_id($last_id)
 
 }
 
-function get_smallest_post_id()
+function get_newest_post_id()
 {
     // connect database
     require_once 'connectMySQL.php';
@@ -239,8 +237,25 @@ function get_smallest_post_id()
     $db_connection = $database->connect();
 
     //process
-    $selectQuery = "SELECT * FROM post ORDER BY post_id ASC";
+    $selectQuery = "SELECT * FROM post ORDER BY post_id DESC";
     $select = $db_connection->query($selectQuery);
     $smallest_id = $select->fetch_assoc()['post_id'];
     return $smallest_id;
 }
+
+function check_liked($user_id, $post_id){
+    // connect database
+    require_once 'connectMySQL.php';
+    $database = new MySQLDatabase();
+    $db_connection = $database->connect();
+    //process
+    $selectQuery = "SELECT * FROM like_info WHERE user_id = '$user_id' AND post_id = '$post_id'";
+    $select = $db_connection->query($selectQuery);
+    if ($select->num_rows == 0){
+        return False;
+    }
+    else{
+        return True;
+    }
+}
+
