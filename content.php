@@ -2,7 +2,9 @@
 require_once 'php/check_logging.php';
 require_once 'php/functions.php';
 require_once 'php/Parsedown.php';
+session_start();
 $post_id = $_REQUEST['id'];
+$user_id = $_SESSION['id'];
 $post = get_post_by_id($post_id);
 $username = $post['user_username'];
 $title = $post['title'];
@@ -10,6 +12,7 @@ $num_like = $post['num_like'];
 $content = $post['content'];
 $Parsedown = new Parsedown();
 $content = $Parsedown->text($content);
+$liked = check_liked($user_id, $post_id);
 ?>
 <html>
 <head>
@@ -23,7 +26,14 @@ $content = $Parsedown->text($content);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#like_button').click(function () {
+            var like_button = $('#like_button');
+            if (<?php echo (int)$liked ?>) {
+                like_button.addClass("liked");
+            }
+            else {
+                like_button.addClass("not-liked");
+            }
+            like_button.click(function () {
                 $(this).toggleClass("not-liked liked");
                 var like = $(this).hasClass("liked");
                 var el = $('#num_like');
@@ -61,7 +71,7 @@ $content = $Parsedown->text($content);
 <div class="container">
     <div class="row">
         <div class="col-sm-1">
-            <span class='toggle fa not-liked' id="like_button"></span>
+            <span class='toggle fa' id="like_button"></span>
             </br>
             <div style="display: inline; font-size:30px;" id="num_like"><?php echo $num_like ?></div>
         </div>
