@@ -25,7 +25,6 @@
         return tmp;
       }();
       last_id++;
-      alert(last_id);
       loadMoreData(last_id);
       $(document).on('scroll', function() {
         if ($(this).scrollTop() >= $('#post-data').position().top) {
