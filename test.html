@@ -11,18 +11,21 @@
     var loading = false;
     var end = false;
     $(document).ready(function() {
-      var last_id;
-      $.ajax({
-        url: 'https://infs3202-c25wl.uqcloud.net/travnow/php/newest_post_id.php',
-        type: "post",
-        success: function(response) {
-          last_id = response;
-        },
-        error: function(jXHR, textStatus, errorThrown) {
-          alert(errorThrown);
-        }
-      });
-      last_id += 1;
+      var last_id = function() {
+        var tmp = null;
+        $.ajax({
+          'async': false,
+          'type': "POST",
+          'global': false,
+          'url': "https://infs3202-c25wl.uqcloud.net/travnow/php/newest_post_id.php",
+          'success': function(data) {
+            tmp = data;
+          }
+        });
+        return tmp;
+      }();
+      last_id++;
+      alert(last_id);
       loadMoreData(last_id);
       $(document).on('scroll', function() {
         if ($(this).scrollTop() >= $('#post-data').position().top) {
