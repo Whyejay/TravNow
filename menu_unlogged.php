@@ -68,8 +68,18 @@
 <nav class="navbar navbar-default" style="margin-bottom: 0px;" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+        <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
             <a class="navbar-brand" href="./index.php"><img src="./img/logo.png" alt="Logo Picture"></a>
         </div>
+                <div class="collapse navbar-collapse navbar-left" id="navbar1">
+
         <ul class="nav navbar-nav">
             <li class="home"><a href="./index.php">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -77,6 +87,7 @@
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
         </ul>
+
         <div class="col-sm-3 col-md-3 pull-left">
             <form class="navbar-form" role="search" id="search-form">
                 <div class="input-group">
@@ -86,6 +97,8 @@
             </form>
             <div id="livesearch"></div>
         </div>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="navbar1">
         <ul class="nav navbar-nav navbar-right">
             <li button onclick="window.location.href='html/signupForm.html#toregister'" id="post_button" type="button"
                 style="top:7px" class="btn btn-primary">Create new post</button></li>
@@ -131,6 +144,7 @@
                             </div>
                             <div class="bottom text-center">
                                 New here ? <a href="./html/signupForm.html#toregister"><b>Join Us</b></a>
+                                </div>
                             </div>
                         </div>
                     </li>
