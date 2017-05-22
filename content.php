@@ -57,6 +57,16 @@ $liked = check_liked($user_id, $post_id);
                     data: data_json
                 });
             });
+
+            var share_button = $('#share_button');
+            share_button.click(function (){
+              FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: window.location.href,
+                },
+                function(response){});
+            });
         });
     </script>
 </head>
@@ -74,6 +84,7 @@ $liked = check_liked($user_id, $post_id);
             <span class='toggle fa' id="like_button"></span>
             </br>
             <div style="display: inline; font-size:30px;" id="num_like"><?php echo $num_like ?></div>
+            <div id="share_button" class="btn btn-success clearfix">Share</div>
         </div>
         <div class="col-sm-8 blog-main">
             <!--            <div id="content" class="blog-post"></div>-->
