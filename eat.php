@@ -7,6 +7,7 @@ require_once 'php/check_logging.php';
     <title>TravelNow</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,14 +18,15 @@ require_once 'php/check_logging.php';
 <link rel="stylesheet" type="text/css" href="css/eat.css">
 
 <div class="jumbotron img-responsive container-fluid">
-    <div class="content">
+<div class="left col-md-1"></div>
+    <div class="content col-md-10">
         <h1>Restaurants</h1>
 
-        <p>Check here on the latest places to have the best meal in the world!</p>
+        <h3>Check here on the latest places to have the best meal in the world!</h3>
 
         <div class="eatcontent">
-            <p class="eattitle">The Boathouse at Rocketts Landing</p>
-            <p class="eatdate">19 May 2016</p>
+            <h2>The Boathouse at Rocketts Landing</h2>
+            <h4 class="eatdate">19 May 2016</h4>
             <img id="myImg" src="img/eat1.jpg" alt="The Boathouse at Rocketts Landing, 4708 Old Main St, Richmond, VA 23231, USA">
             <div id="myModal" class="modal">
 
@@ -37,11 +39,11 @@ require_once 'php/check_logging.php';
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
             </div>
-            <p class="eatcaption">Experience everything that is unique about Richmond at our Rocketts Landing location: a vibrant city among luscious greenery and calming water. Not to mention expertly prepared local seafood, pizza, and more.</p>
+            <h6>Experience everything that is unique about Richmond at our Rocketts Landing location: a vibrant city among luscious greenery and calming water. Not to mention expertly prepared local seafood, pizza, and more.</h6>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <hr>
+
+					
         <div class="eatcontent">
             <p class="eattitle">Chicken Institute</p>
             <p class="eatdate">24 March 2016</p>
@@ -61,6 +63,7 @@ require_once 'php/check_logging.php';
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
+		
         <hr>
         <div class="eatcontent">
             <p class="eattitle">Longrain</p>
@@ -83,11 +86,14 @@ require_once 'php/check_logging.php';
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
     </div>
+	<div class="right col-md-1"></div>
+	</div>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
+	
 	    <footer>
         <div class="container">
             <div class="row">
@@ -145,8 +151,6 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
-</div>
-
 	
 </body>
 <script>

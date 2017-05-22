@@ -7,6 +7,7 @@ require_once 'php/check_logging.php';
     <title>TravelNow</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,14 +18,15 @@ require_once 'php/check_logging.php';
 <link rel="stylesheet" type="text/css" href="css/activity.css">
 
 <div class="jumbotron img-responsive container-fluid">
-    <div class="content">
+<div class="left col-md-1"></div>
+    <div class="content col-md-10">
         <h1>Activities</h1>
 
-        <p>Check out the fun things to do!</p>
+        <h3>Check out the fun things to do!</h3>
 
         <div class="actcontent">
-            <p class="acttitle">Fishing @ The Sand Pumping Jetty</p>
-            <p class="actdate">07 April 2017</p>
+            <h2>Fishing @ The Sand Pumping Jetty</h2>
+            <h4 class="actdate">07 April 2017</h4>
             <img id="myImg" src="img/fishing.jpg" alt="Sand Pumping Jetty @ Gold Coast Seaway">
             <div id="myModal" class="modal">
 
@@ -40,8 +42,8 @@ require_once 'php/check_logging.php';
             <p class="actcaption">Fishing - This spot is on fire all year round for the seasoned fisherman. Resident expert Herb says to try and aim for tailor fish throughout the winter, while the lead-up to summer is a great time for nice flathead, dart, bream, whiting and even the odd big jewfish. “It’s a great spot to fish right now actually, especially with the early spring weather. It’s a lovely spot to spend the day even if you don’t catch a thing — not that that’s an option.”</p>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <hr>
+       
+	   
         <div class="actcontent">
             <p class="acttitle">Sky Diving</p>
             <p class="actdate">06 November 2016</p>
@@ -61,6 +63,7 @@ require_once 'php/check_logging.php';
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
+		
         <hr>
         <div class="actcontent">
             <p class="acttitle">Surfing @ Gold Coast Surf School</p>
@@ -81,7 +84,7 @@ require_once 'php/check_logging.php';
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
-
+		<div class="right col-md-1"></div>
     </div>
 	<br>
 	<br>
@@ -145,7 +148,7 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
-</div>
+
 
 </body>
 
