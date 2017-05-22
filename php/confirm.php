@@ -50,5 +50,7 @@ if ($action['result'] != 'error') {
     $database->disconnect();
 }
 
-echo json_encode($action); ?>
-
+echo $action['message'];
+echo "\n";
+echo  "REDIRECTING TO HOME PAGE";
+header('Refresh: 3; URL=https://infs3202-c25wl.uqcloud.net/travnow/'); ?>
