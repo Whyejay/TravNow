@@ -78,7 +78,7 @@
 
             <a class="navbar-brand" href="./index.php"><img src="./img/logo.png" alt="Logo Picture"></a>
         </div>
-                <div class="collapse navbar-collapse navbar-left" id="navbar1">
+        <div class="collapse navbar-collapse" id="navbar1">
 
         <ul class="nav navbar-nav">
             <li class="home"><a href="./index.php">Home</a></li>
@@ -88,21 +88,28 @@
             <li><a href="eat.php">Restaurants</a></li>
         </ul>
 
-        <div class="col-sm-3 col-md-3 pull-left">
+        <div class="col-md-4 pull-left">
             <form class="navbar-form" role="search" id="search-form">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" onkeyup="showResult(this.value)">
+                    <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                    </span>
                 </div>
-                <i class="glyphicon glyphicon-search"></i>
+                
             </form>
             <div id="livesearch"></div>
+        
         </div>
-        </div>
-        <div class="collapse navbar-collapse navbar-right" id="navbar1">
+        
+        
         <ul class="nav navbar-nav navbar-right">
+        
+            
             <li button onclick="window.location.href='html/signupForm.html#toregister'" id="post_button" type="button"
                 style="top:7px" class="btn btn-primary">Create new post</button></li>
-
+                
+            
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
@@ -150,7 +157,9 @@
                     </li>
                 </ul>
             </li>
+
         </ul>
+        </div>
     </div>
 </nav>
 </body>
