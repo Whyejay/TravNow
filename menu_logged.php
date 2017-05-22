@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/menu_logged.css">
     <script type="text/javascript">
         function showResult(str) {
-            var search_menu = $('#search-form').children('#livesearch');
+            var search_menu = $('#livesearch');
             if (str.length == 0) {
                 search_menu.empty();
                 return;
@@ -47,9 +47,9 @@
                     <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" onkeyup="showResult(this.value)">
                 </div>
                 <i class="glyphicon glyphicon-search"></i>
-                <div id="livesearch" class="dropdown-content">
-                </div>
             </form>
+            <div id="livesearch">
+            </div>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li button onclick="window.location.href='post.php'" id="post_button" type="button" style="top:4px"
