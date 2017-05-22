@@ -13,9 +13,9 @@ require_once 'php/check_logging.php';
         var loading = false;
         var end = false;
         $(document).ready(function () {
-            var first_id = <?php require_once 'php/functions.php'; echo get_smallest_post_id();?>;
-            first_id -= 1;
-            loadMoreData(first_id);
+            var last_id = <?php require_once 'php/functions.php'; echo get_newest_post_id();?>;
+            last_id += 1;
+            loadMoreData(last_id);
             $(document).on('scroll', function () {
                 if ($(this).scrollTop() >= $('#post-data').position().top) {
                     var last_id = $('#post-data').children('.row').last().attr('id');
