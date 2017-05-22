@@ -9,7 +9,7 @@ $db_connection = $database->connect();
 
 // process
 $last_id = $_REQUEST['last_id'];
-$selectQuery = "SELECT * FROM post WHERE post_id > '$last_id' ORDER BY post_id ASC LIMIT 2";
+$selectQuery = "SELECT * FROM post WHERE post_id < '$last_id' ORDER BY post_id DESC LIMIT 2";
 $select = $db_connection->query($selectQuery);
 while ($post = $select->fetch_assoc()) {
     $content = $Parsedown->text($post['content']);
