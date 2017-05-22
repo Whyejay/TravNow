@@ -91,14 +91,22 @@
 /*.navbar ul li ul li a:hover{*/
 
 /*}*/
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
 .container-fluid {
-    background-color: azure;
+    background-color: white;
 }
 .jumbotron {
     height: 100%;
     margin-bottom: 0px;
-    background-color: azure;
-    background-image: url(../img/);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -118,31 +126,32 @@
 .jumbotron p {
     font-size: 18px;
 }
-
+/*
 .content {
     margin-left:300px;
     margin-right:400px;
 }
 
 .eatcontent .eattitle {
-    font-weight:bold;
-    font-size:30px;
 
+    font-size:30px;
+    font-weight:bold
 }
 
 .eatcontent .eatdate {
     font-size:15px;
-}
+}*/
 
-.eatcontent .eatcaption {
+/*.eatcontent .eatcaption {
     font-size:15px;
     margin-top:4px;
 }
-
+*/
 .eatcontent img {
     height:450px;
     width:100%;
 }
+
 #myImg, #myImg2, #myImg3 {
     border-radius: 5px;
     cursor: pointer;
@@ -242,7 +251,8 @@ li{
 
 footer { 
 	background-color:#001f3f;
-	min-height:250px;
+	max-height:250px;
+    height:200px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -363,3 +373,7 @@ footer {
 .google{
      background-color:#f63e28;
  }
+
+
+
+
