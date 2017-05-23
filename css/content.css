@@ -1,0 +1,11 @@
+.liked::before {
+    color: #600;
+    content: '\f004';
+    font-size:48px;
+}
+
+.not-liked::before {
+    color: #aaa;
+    content: '\f08a';
+    font-size:48px;
+}

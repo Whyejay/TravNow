@@ -71,26 +71,30 @@ $liked = check_liked($user_id, $post_id);
     </script>
 </head>
 <body>
-<div class="blog-header">
-    <div class="container" style="margin-top:50px">
+
+<div class="blog-header col-md-12">
+    <div class="container col-md-12" style="margin-top:50px">
         <h1 id="title" class="blog-title"> <?php echo $title ?></h1>
         <p class="blog-post-meta">Posted by <a href="#"><?php echo $username ?></a></p>
     </div>
 </div>
 <hr>
-<div class="container">
+<div class="container col-md-9">
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             <span class='toggle fa' id="like_button"></span>
             </br>
             <div style="display: inline; font-size:30px;" id="num_like"><?php echo $num_like ?></div>
             <div id="share_button" class="btn btn-success clearfix">Share</div>
         </div>
-        <div class="col-sm-8 blog-main">
+        <div class="col-md-8 blog-main img-responsive">
             <!--            <div id="content" class="blog-post"></div>-->
             <?php echo $content ?>
-        </div><!-- /.row -->
-    </div><!-- /.container -->
+        </div>
+    </div>
+</div>
+<div class="container col-md-3">
+    
 </div>
 </body>
 </html>
