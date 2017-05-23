@@ -76,7 +76,7 @@
             </button>
 
 
-            <a class="navbar-brand" href="./index.php"><img src="./img/logo.png" alt="Logo Picture"></a>
+            <a class="navbar-brand" href="./index.php" style="padding:0;"><img src="./img/logo.png" style="height:100px;width:60px;" alt="Logo Picture"></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar1">
 
