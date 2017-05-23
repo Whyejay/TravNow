@@ -16,6 +16,7 @@ require_once 'php/check_logging.php';
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <link rel="stylesheet" type="text/css" href="css/travel.css">
+
 <div class="jumbotron img-responsive container-fluid">
 <div class="left col-md-1"></div>
     <div class="content col-md-10">
@@ -38,7 +39,7 @@ require_once 'php/check_logging.php';
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
             </div>
-            <h6>Point Reyes National Seashore is a 71,028-acre park preserve located on the Point Reyes Peninsula in Marin County, California. As a national seashore, it is maintained by the US National Park Service as an important nature preserve.</h6>
+            <p class="travcaption">Point Reyes National Seashore is a 71,028-acre park preserve located on the Point Reyes Peninsula in Marin County, California. As a national seashore, it is maintained by the US National Park Service as an important nature preserve.</p>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
@@ -83,7 +84,6 @@ require_once 'php/check_logging.php';
                 <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                         width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
-        </div>
         <div class="right col-md-1"></div>
     </div>
     <br>
