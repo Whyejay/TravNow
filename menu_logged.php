@@ -27,7 +27,7 @@
     </script>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0px;" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
@@ -41,28 +41,30 @@
         <div class="collapse navbar-collapse navbar-left" id="navbar1">
         <ul class="nav navbar-nav">
             <li class="home"><a href="index.php">Home</a></li>
-            <li><a href="#about">About</a>
-
-            </li>
+            <li><a href="#about">About</a></li>
             <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
         </ul>
-        <div class="col-sm-3 col-md-3 pull-left">
+        <div class="col-md-4 pull-left">
             <form class="navbar-form" role="search" id="search-form">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" onkeyup="showResult(this.value)">
+                     <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                    </span>
                 </div>
-                <i class="glyphicon glyphicon-search"></i>
+                
             </form>
-            <div id="livesearch">
-            </div>
+            <div id="livesearch" style="background-color: rgba(255,255,255,0.85);list-style-type: none;margin: 10;min-width: 250px;position: absolute;top: 42px;z-index: 100;padding-left: 15px;padding-right:5px;text-align: left;line-height: 150%;"></div>
+        
         </div>
         </div>
-        <div class="collapse navbar-collapse navbar-right" id="navbar1">
         <ul class="nav navbar-nav navbar-right">
+
             <li button onclick="window.location.href='post.php'" id="post_button" type="button" style="top:4px"
                 class="btn btn-primary">Create new post</button></li>
+
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="glyphicon glyphicon-user"></span>
@@ -102,7 +104,8 @@
                 </ul>
             </li>
         </ul>
-        </div>
+
+      </div>
     </div>
 </nav>
 </body>

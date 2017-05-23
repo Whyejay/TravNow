@@ -98,7 +98,7 @@
                 </div>
                 
             </form>
-            <div id="livesearch"></div>
+            <div id="livesearch" style="background-color: rgba(255,255,255,0.85);list-style-type: none;margin: 10;min-width: 250px;position: absolute;top: 42px;z-index: 100;padding-left: 15px;padding-right:5px;text-align: left;line-height: 150%;"></div>
         
         </div>
         
