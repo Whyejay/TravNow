@@ -1,4 +1,4 @@
-<?php
+    <?php
 require_once 'php/check_logging.php';
 ?>
 <!DOCTYPE html>
@@ -96,7 +96,7 @@ require_once 'php/check_logging.php';
 
 
     <footer>
-        <div class="container">
+        <div class="container" style="height:250px;width:100%;">
             <div class="row">
                 <div class="col-md-3 col-sm-6 footer-col">
                     <div class="logofooter"> <a href="index.php"><img src="img/logo.png" alt="logo" style="width:35px;height:35px;"></a>
@@ -136,7 +136,7 @@ require_once 'php/check_logging.php';
     <!--footer start from here-->
 
     <div class="f1">
-        <div class="container">
+        <div class="container" style="height:60px;width:100%;">
             <div class="col-md-6">
                 <p>© 2017 - All Rights with TravNow</p>
             </div>
@@ -152,6 +152,7 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
+</div>
 </body>
 <script>
     // Get the modal
