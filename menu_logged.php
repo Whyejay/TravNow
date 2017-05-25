@@ -41,7 +41,7 @@
         <div class="collapse navbar-collapse navbar-left" id="navbar1">
         <ul class="nav navbar-nav">
             <li class="home"><a href="index.php">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
@@ -54,10 +54,10 @@
                     <i class="glyphicon glyphicon-search"></i>
                     </span>
                 </div>
-                
+
             </form>
             <div id="livesearch" style="background-color: rgba(255,255,255,0.85);list-style-type: none;margin: 10;min-width: 250px;position: absolute;top: 42px;z-index: 100;padding-left: 15px;padding-right:5px;text-align: left;line-height: 150%;"></div>
-        
+
         </div>
         </div>
         <ul class="nav navbar-nav navbar-right">

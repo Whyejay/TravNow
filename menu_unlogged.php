@@ -82,7 +82,7 @@
 
         <ul class="nav navbar-nav">
             <li class="home"><a href="./index.php">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="travel.php">Travel</a></li>
             <li><a href="activity.php">Activities</a></li>
             <li><a href="eat.php">Restaurants</a></li>
@@ -96,20 +96,20 @@
                     <i class="glyphicon glyphicon-search"></i>
                     </span>
                 </div>
-                
+
             </form>
             <div id="livesearch" style="background-color: rgba(255,255,255,0.85);list-style-type: none;margin: 10;min-width: 250px;position: absolute;top: 42px;z-index: 100;padding-left: 15px;padding-right:5px;text-align: left;line-height: 150%;"></div>
-        
+
         </div>
-        
-        
+
+
         <ul class="nav navbar-nav navbar-right">
-        
-            
-            <li button onclick="window.location.href='html/signupForm.html#toregister'" id="post_button" type="button"
+
+
+            <li button onclick="window.location.href='signupForm.php?action=login'" id="post_button" type="button"
                 style="top:7px" class="btn btn-primary">Create new post</button></li>
-                
-            
+
+
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
@@ -150,7 +150,7 @@
                                 <div id="output"></div>
                             </div>
                             <div class="bottom text-center">
-                                New here ? <a href="./html/signupForm.html#toregister"><b>Join Us</b></a>
+                                New here ? <a href="signupForm.php?action=signup"><b>Join Us</b></a>
                                 </div>
                             </div>
                         </div>

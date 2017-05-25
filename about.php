@@ -1,3 +1,6 @@
+<?php
+require_once 'php/check_logging.php';
+?>
 <html lang="en">
 <head>
     <title>TravelNow</title>
@@ -8,12 +11,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     (function() {
-    
+
     function Slideshow( element ) {
         this.el = document.querySelector( element );
         this.init();
     }
-    
+
     Slideshow.prototype = {
         init: function() {
             this.wrapper = this.el.querySelector( ".slider-wrapper" );
@@ -23,14 +26,14 @@
             this.index = 0;
             this.total = this.slides.length;
             this.timer = null;
-            
+
             this.action();
-            this.stopStart();   
+            this.stopStart();
         },
         _slideTo: function( slide ) {
             var currentSlide = this.slides[slide];
             currentSlide.style.opacity = 1;
-            
+
             for( var i = 0; i < this.slides.length; i++ ) {
                 var slide = this.slides[i];
                 if( slide !== currentSlide ) {
@@ -46,7 +49,7 @@
                     self.index = 0;
                 }
                 self._slideTo( self.index );
-                
+
             }, 3000);
         },
         stopStart: function() {
@@ -54,31 +57,31 @@
             self.el.addEventListener( "mouseover", function() {
                 clearInterval( self.timer );
                 self.timer = null;
-                
+
             }, false);
             self.el.addEventListener( "mouseout", function() {
                 self.action();
-                
+
             }, false);
         }
-        
-        
+
+
     };
-    
+
     document.addEventListener( "DOMContentLoaded", function() {
-        
+
         var slider = new Slideshow( "#main-slider" );
-        
+
     });
-    
-    
+
+
 })();
 </script>
 </head>
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <link rel="stylesheet" type="text/css" href="css/about.css">
 
-<div class="jumbotron text-center img-responsive container-fluid">  
+<div class="jumbotron text-center img-responsive container-fluid">
         <div class="container col-md-4">
             <h2>About Us</h2>
             <small>
@@ -95,7 +98,7 @@
                 <img src="img/slide2.jpg" alt="Second" class="slide" />
                 <img src="img/slide3.jpg" alt="Third" class="slide" />
             </div>
-    </div>  
+    </div>
 
 ​<br>
 <br>
