@@ -91,6 +91,8 @@ require_once 'php/check_logging.php';
 	<br>
 	<br>
 	<br>
+	<div class="container1">
+	<h2>
 	    <footer>
         <div class="container">
             <div class="row">
@@ -128,9 +130,10 @@ require_once 'php/check_logging.php';
                 </div>
             </div>
         </div>
-    </footer>
+    </footer></h2>
     <!--footer start from here-->
-
+	<div class="panel panel-default">
+	<div class="panel-body" style="padding:0px;">
     <div class="f1">
         <div class="container">
             <div class="col-md-6">
@@ -148,7 +151,9 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
-
+	</div>
+</div>
+</div>
 
 </body>
 
