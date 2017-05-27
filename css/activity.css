@@ -253,6 +253,8 @@ footer {
 	background-color:#001f3f;
 	max-height:250px;
     height:200px;
+	position: relative;
+    top: 12px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
 }
