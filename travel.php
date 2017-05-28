@@ -43,10 +43,10 @@ require_once 'php/check_logging.php';
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-
+            <hr>
             <div class="travcontent">
-                <p class="travtitle">Sebastian's travelogue</p>
-                <p class="travdate">12 March 2017</p>
+                <h2>Sebastian's travelogue</h2>
+                <h4 class="travdate">12 March 2017</h4>
                 <img id="myImg2" src="img/curacao.jpg" alt="Curacao, Netherlands">
                 <div id="myModal2" class="modal2">
 
@@ -66,8 +66,8 @@ require_once 'php/check_logging.php';
 
             <hr>
             <div class="travcontent">
-                <p class="travtitle">Crystal's journey to the east</p>
-                <p class="travdate">25 December 2016</p>
+                <h2 class="travtitle">Crystal's journey to the east</h2>
+                <h4 class="travdate">25 December 2016</h4>
                 <img id="myImg3" src="img/vietnam.jpg" alt="Sapa, Vietnam">
                 <div id="myModal3" class="modal3">
 
