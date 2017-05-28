@@ -85,7 +85,15 @@ require_once 'php/check_logging.php';
         <div class="container col-md-4">
             <h2>About Us</h2>
             <small>
-            We are etc etc etc
+            We are a team of international students studying in this course INFS3202 - Web Information Systems at the University of Queensland. <br><br>
+
+            Tan Yi Jie - Undergraduate of Information Technology.<br>
+            Nicholas Quek - Undergraduate of Information Technology.<br>
+            Duong Anh Khoa - Undergraduate of Software Engineering.<br><br>
+
+            We love to travel which is why we decided to come up with a website about travelling. One of a problem we faced in the past was getting to the location with high expectations and the reality did not meet our expectations. 
+
+            <br>We hope you find our website useful and feedbacks are welcome - feedbacks@travnow.com
             </small>
         </div>
             <div class="container cold-md-4">
