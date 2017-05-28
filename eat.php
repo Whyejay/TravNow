@@ -1,4 +1,4 @@
-<?php
+    <?php
 require_once 'php/check_logging.php';
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ require_once 'php/check_logging.php';
 </head>
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<link rel="stylesheet" type="text/css" href="css/eat.css">
+<link rel="stylesheet" type="text/css" href="css/travel.css">
 
 <div class="jumbotron img-responsive container-fluid">
 <div class="left col-md-1"></div>
@@ -24,10 +24,10 @@ require_once 'php/check_logging.php';
 
         <h3>Check here on the latest places to have the best meal in the world!</h3>
 
-        <div class="eatcontent">
+        <div class="travcontent">
             <h2>The Boathouse at Rocketts Landing</h2>
-            <h4 class="eatdate">19 May 2016</h4>
-            <img id="myImg" src="img/eat1.jpg" alt="The Boathouse at Rocketts Landing, 4708 Old Main St, Richmond, VA 23231, USA">
+            <h4 class="travdate">19 May 2016</h4>
+            <img id="myImg" src="img/eat.jpg" alt="Point Reyes, California">
             <div id="myModal" class="modal">
 
                 <!-- The Close Button -->
@@ -39,61 +39,67 @@ require_once 'php/check_logging.php';
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
             </div>
-            <h6>Experience everything that is unique about Richmond at our Rocketts Landing location: a vibrant city among luscious greenery and calming water. Not to mention expertly prepared local seafood, pizza, and more.</h6>
+            <p class="travcaption">The Boathouse at Rocketts Landing, 4708 Old Main St, Richmond, VA 23231, USA
+Experience everything that is unique about Richmond at our Rocketts Landing location: a vibrant city among luscious greenery and calming water. Not to mention expertly prepared local seafood, pizza, and more.
+</p>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-					
-        <div class="eatcontent">
-            <p class="eattitle">Chicken Institute</p>
-            <p class="eatdate">24 March 2016</p>
-            <img id="myImg2" src="img/eat2.jpg" alt="Chicken Institute, 61 Fitzroy St, Surry Hills NSW 2010">
-            <div id="myModal2" class="modal2">
 
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+            <div class="travcontent">
+                <p class="travtitle">Chicken Institute/p>
+                <p class="travdate">24 March 2016</p>
+                <img id="myImg2" src="img/eat1.jpg" alt="Curacao, Netherlands">
+                <div id="myModal2" class="modal2">
 
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img02">
+                    <!-- The Close Button -->
+                    <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
 
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption2"></div>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img02">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption2"></div>
+                </div>
+                <p class="travcaption">Chicken Institute, 61 Fitzroy St, Surry Hills NSW 2010
+Don’t let the name fool you. Chicken Institute is not a chicken-only butcher in your local shopping centre, nor is it a school for poultry upskilling. It’s a Korean restaurant on Fitzroy Street serving up the surprisingly excellent combination of fried chicken in buckets, bibimbaps and milkshakes.</p>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                        width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
-            <p class="eatcaption">Don’t let the name fool you. Chicken Institute is not a chicken-only butcher in your local shopping centre, nor is it a school for poultry upskilling. It’s a Korean restaurant on Fitzroy Street serving up the surprisingly excellent combination of fried chicken in buckets, bibimbaps and milkshakes.</p>
-            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
-                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-		
-        <hr>
-        <div class="eatcontent">
-            <p class="eattitle">Longrain</p>
-            <p class="eatdate">22 March 2016</p>
-            <img id="myImg3" src="img/eat3.jpg" alt="Longrain, 40-44 Little Bourke St Melbourne, VIC 3000">
-            <div id="myModal3" class="modal3">
 
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
+            <hr>
+            <div class="travcontent">
+                <p class="travtitle">Longrain</p>
+                <p class="travdate">22 March 2016</p>
+                <img id="myImg3" src="img/eat2.jpg" alt="Sapa, Vietnam">
+                <div id="myModal3" class="modal3">
 
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img03">
+                    <!-- The Close Button -->
+                    <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
 
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption3"></div>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img03">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption3"></div>
+                </div>
+                <p class="travcaption">Longrain, 40-44 Little Bourke St Melbourne, VIC 3000
+A decade and a half since its arrival transformed Sydney's understanding of high-end Thai cuisine, Longrain remains a buzzing destination stalwart on the local dining scene. It isn’t hard to see why. The interior is fun but fancy enough, the service warm and accommodating. And the food? Well, after a long-overdue return visit, we can tell you Longrain is still kicking ass in that department, too.</p>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                        width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
-            <p class="eatcaption">A decade and a half since its arrival transformed Sydney's understanding of high-end Thai cuisine, Longrain remains a buzzing destination stalwart on the local dining scene. It isn’t hard to see why. The interior is fun but fancy enough, the service warm and accommodating. And the food? Well, after a long-overdue return visit, we can tell you Longrain is still kicking ass in that department, too.
-            </p>
-            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
-                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-	<div class="right col-md-1"></div>
+        <div class="right col-md-1"></div>
+    </div>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	
-	    <footer>
+	</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer style="height:240px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 footer-col">
@@ -133,7 +139,7 @@ require_once 'php/check_logging.php';
     </footer>
     <!--footer start from here-->
 
-    <div class="f1">
+    <div class="f1"">
         <div class="container">
             <div class="col-md-6">
                 <p>© 2017 - All Rights with TravNow</p>
@@ -150,7 +156,6 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
-	
 </body>
 <script>
     // Get the modal
@@ -199,5 +204,6 @@ require_once 'php/check_logging.php';
     }
 
 </script>
+
 
 </html>
