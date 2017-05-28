@@ -1,4 +1,4 @@
-<?php
+    <?php
 require_once 'php/check_logging.php';
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ require_once 'php/check_logging.php';
 </head>
 
 <body id="indexPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<link rel="stylesheet" type="text/css" href="css/activity.css">
+<link rel="stylesheet" type="text/css" href="css/travel.css">
 
 <div class="jumbotron img-responsive container-fluid">
 <div class="left col-md-1"></div>
@@ -24,9 +24,9 @@ require_once 'php/check_logging.php';
 
         <h3>Check out the fun things to do!</h3>
 
-        <div class="actcontent">
+        <div class="travcontent">
             <h2>Fishing @ The Sand Pumping Jetty</h2>
-            <h4 class="actdate">07 April 2017</h4>
+            <h4 class="travdate">07 April 2017</h4>
             <img id="myImg" src="img/fishing.jpg" alt="Sand Pumping Jetty @ Gold Coast Seaway">
             <div id="myModal" class="modal">
 
@@ -39,61 +39,63 @@ require_once 'php/check_logging.php';
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
             </div>
-            <p class="actcaption">Fishing - This spot is on fire all year round for the seasoned fisherman. Resident expert Herb says to try and aim for tailor fish throughout the winter, while the lead-up to summer is a great time for nice flathead, dart, bream, whiting and even the odd big jewfish. “It’s a great spot to fish right now actually, especially with the early spring weather. It’s a lovely spot to spend the day even if you don’t catch a thing — not that that’s an option.”</p>
+            <p class="travcaption">Fishing - This spot is on fire all year round for the seasoned fisherman. Resident expert Herb says to try and aim for tailor fish throughout the winter, while the lead-up to summer is a great time for nice flathead, dart, bream, whiting and even the odd big jewfish. “It’s a great spot to fish right now actually, especially with the early spring weather. It’s a lovely spot to spend the day even if you don’t catch a thing — not that that’s an option.”</p>
             <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
                     width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-       
-	   
-        <div class="actcontent">
-            <p class="acttitle">Sky Diving</p>
-            <p class="actdate">06 November 2016</p>
-            <img id="myImg2" src="img/skydive.jpg" alt="Sky Diving @ Byron Bay">
-            <div id="myModal2" class="modal2">
 
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+            <hr>
+            <div class="travcontent">
+                <h2>Sky Diving</h2>
+                <h4 class="travdate">06 November 2016</h4>
+                <img id="myImg2" src="img/skydive.jpg" alt="Sky Diving @ Byron Bay">
+                <div id="myModal2" class="modal2">
 
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img02">
+                    <!-- The Close Button -->
+                    <span class="close" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
 
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption2"></div>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img02">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption2"></div>
+                </div>
+                <p class="travcaption">Skydive at Byron Bay’s closest beach skydive for the ultimate adrenalin rush. You’ll drop from an extreme altitude of up to 14,000ft and freefall at over 200 km/hr for up to an insane 60 seconds, then float under canopy over Byron Bay for 5-7 minutes soaking up spectacular beach and hinterland views all the way to Brisbane, the Gold Coast and beyond.</p>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                        width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
-            <p class="actcaption">Skydive at Byron Bay’s closest beach skydive for the ultimate adrenalin rush. You’ll drop from an extreme altitude of up to 14,000ft and freefall at over 200 km/hr for up to an insane 60 seconds, then float under canopy over Byron Bay for 5-7 minutes soaking up spectacular beach and hinterland views all the way to Brisbane, the Gold Coast and beyond.</p>
-            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
-                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-		
-        <hr>
-        <div class="actcontent">
-            <p class="acttitle">Surfing @ Gold Coast Surf School</p>
-            <p class="actdate">02 November 2016</p>
-            <img id="myImg3" src="img/surfing.jpg" alt="Learn surfing on Australian waters">
-            <div id="myModal3" class="modal3">
 
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
+            <hr>
+            <div class="travcontent">
+                <h2 class="travtitle">Surfing @ Gold Coast Surf School</h2>
+                <h4 class="travdate">02 December 2016</h4>
+                <img id="myImg3" src="img/surfing.jpg" alt="Sapa, Vietnam">
+                <div id="myModal3" class="modal3">
 
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img03">
+                    <!-- The Close Button -->
+                    <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
 
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption3"></div>
+                    <!-- Modal Content (The Image) -->
+                    <img class="modal-content" id="img03">
+
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption3"></div>
+                </div>
+                <p class="travcaption">Surf school on the Gold Coast. There is no better feeling than surfing along a beautifully shaped wave on a crystal clear day. Our aim is for our surfing instructors to provide our clients with a high quality introduction to surfing that is safe, professional and fun. There is nothing we like more, than seeing the thrill people experience when they stand up for the first time. This is why we provide our clients with easy to use techniques, low student to coach ratios and the ideal location. We want your first surf to be a surf in paradise! Click the link below to find out more! <a href="http://www.surfinparadise.com.au/about.asp">http://www.surfinparadise.com.au/about.asp</a></p>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
+                        width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
-            <p class="actcaption">Surf school on the Gold Coast. There is no better feeling than surfing along a beautifully shaped wave on a crystal clear day. Our aim is for our surfing instructors to provide our clients with a high quality introduction to surfing that is safe, professional and fun. There is nothing we like more, than seeing the thrill people experience when they stand up for the first time. This is why we provide our clients with easy to use techniques, low student to coach ratios and the ideal location. We want your first surf to be a surf in paradise! Click the link below to find out more! <a href="http://www.surfinparadise.com.au/about.asp">http://www.surfinparadise.com.au/about.asp</a></p>
-            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=253571025046701"
-                    width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-		<div class="right col-md-1"></div>
+        <div class="right col-md-1"></div>
     </div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class="container1">
-	<h2>
-	    <footer>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer style="height:240px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 footer-col">
@@ -130,11 +132,10 @@ require_once 'php/check_logging.php';
                 </div>
             </div>
         </div>
-    </footer></h2>
+    </footer>
     <!--footer start from here-->
-	<div class="panel panel-default">
-	<div class="panel-body" style="padding:0px;">
-    <div class="f1">
+
+    <div class="f1"">
         <div class="container">
             <div class="col-md-6">
                 <p>© 2017 - All Rights with TravNow</p>
@@ -151,14 +152,7 @@ require_once 'php/check_logging.php';
             </div>
         </div>
     </div>
-	</div>
-</div>
-</div>
-
 </body>
-
-
-
 <script>
     // Get the modal
     var modal = document.getElementById('myModal');
