@@ -1,0 +1,365 @@
+/*.navbar {*/
+    /*margin-bottom: 0;*/
+    /*background-color: azure;*/
+    /*z-index: 9999;*/
+    /*border: 0;*/
+    /*font-size: 15px !important;*/
+    /*line-height: 1.42857143 !important;*/
+    /*letter-spacing: 0.2px;*/
+    /*border-radius: 0;*/
+    /*font-family: helvetica;*/
+    /*font-weight: bold;*/
+    /*overflow:visible;*/
+    /*min-height:50px;*/
+
+/*}*/
+
+/*.navbar-brand>img {*/
+    /*max-height: 120%;*/
+    /*height: 120%;*/
+    /*width: auto;*/
+
+
+/*}*/
+
+/*.navbar-nav li a:hover,*/
+/*.navbar-nav li.active a {*/
+    /*color: #14394f !important;*/
+    /*background-color: #8db9d3!important;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.navbar ul{*/
+    /*margin:0; */
+    /*padding:0; */
+    /*list-style:none;*/
+/*}*/
+
+/*.navbar ul li{*/
+    /*float:left; */
+    /*position:relative;*/
+    /*background-color: azure;*/
+/*}*/
+/*.navbar ul li a*/
+/*{*/
+    /*color:#000; */
+    /*display:block; */
+    /*font-family:'helvetica'; */
+    /*font-size:15px; */
+    /*padding:18px 18.7px;*/
+
+/*}*/
+
+/*.navbar ul li a:hover*/
+/*{*/
+    /*background:#CF0000;*/
+/*}*/
+
+/*!* dropdown css *!*/
+/*.navbar ul li ul{*/
+  /**/
+     /*top:100px; position:absolute;*/
+      /*width:215px; */
+      /*z-index:99999; */
+      /*right:-99999px;*/
+
+
+  /*}*/
+
+/*.navbar ul li ul li{*/
+    /*float:none; */
+    /*position:relative;*/
+    /*border-left: 3px solid black;*/
+
+/*}   */
+
+/*.navbar ul >li:hover >ul*/
+/*{*/
+    /*left:0px; */
+    /*top:49px;*/
+
+
+/*}*/
+/*.navbar ul li ul li a*/
+/*{*/
+    /*font-family:helvetica; */
+    /*font-weight:bold;*/
+
+
+/*}*/
+
+/*.navbar ul li ul li a:hover{*/
+
+/*}*/
+.container-fluid {
+    background-color: azure;
+}
+.jumbotron {
+    height: 100%;
+    margin-bottom: 0px;
+    background-color: azure;
+    background-image: url(../img/);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:100%;
+
+}
+
+.jumbotron h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+.jumbotron a:hover {
+    text-decoration: none;
+
+}
+
+.jumbotron p {
+    font-size: 18px;
+}
+
+.content {
+    margin-left:300px;
+    margin-right:400px;
+}
+
+.actcontent .acttitle {
+    font-weight:bold;
+    font-size:30px;
+
+}
+
+.actcontent .actdate {
+    font-size:15px;
+}
+
+.actcontent .actcaption {
+    font-size:15px;
+    margin-top:4px;
+}
+
+.actcontent img {
+    height:450px;
+    width:100%;
+}
+#myImg, #myImg2, #myImg3 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.8;}
+#myImg2:hover {opacity: 0.8;}
+#myImg3:hover {opacity: 0.8;}
+/* The Modal (background) */
+.modal, .modal2, .modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: black; /* Fallback color */
+    background-color: black; /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption, #caption2, #caption3 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/*CSS for footer*/
+
+ul,li{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style-type:none;
+}
+
+footer { 
+	background-color:#001f3f;
+	min-height:250px;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.footer-col { 
+	margin-top:10px; 
+}
+
+.logofooter { 
+	margin-bottom:10px;
+	font-size:25px;
+	color:#fff; 
+	font-weight:700;
+}
+
+.footer-col p { 
+	color:#fff; 
+	font-size:12px; 
+	font-family: 'Open Sans', sans-serif; 
+	margin-bottom:15px;
+}
+
+.footer-col p i {
+	width:12px;
+	color:#999;
+}
+
+.footer-ul { 
+	list-style-type:none; 
+	padding-left:0;
+	margin-left:2px;
+}
+
+.footer-ul li { 
+	line-height:24px;
+	font-size:12px;
+}
+
+.footer-ul li a { 
+	color:#a0a3a4; 
+	transition: color 0.2s linear 0s, background 0.2s linear 0s; 
+}
+
+.f1 { 
+	min-height:30px;
+	background-color:#000000;
+}
+
+.f1 p { 
+	text-align:left; 
+	color:#FFF; 
+	padding:10px 0;
+	margin-bottom:0;
+}
+
+.heading7 {
+	font-size:20px; 
+	font-weight:600; 
+	color:#d9d6d6;
+	margin-bottom:10px;
+}
+
+.post p { 
+	font-size:12px;
+	color:#FFF;
+	line-height:20px;
+}
+
+.post p span { 
+	display:block; 
+	color:#8f8f8f;
+}
+
+.bottom_ul { 
+	list-style-type:none; 
+	float:right;
+	margin-bottom:0;
+}
+
+.bottom_ul li { 
+	float:left;
+	line-height:40px;
+}
+
+.bottom_ul li:after {
+	content:"/"; 
+	color:#FFF;
+	margin-right:8px;
+	margin-left:8px;
+}
+
+.bottom_ul li a { color:#FFF;  font-size:12px;}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 7px;
+    border-radius: 50%;
+}
+
+.footer-social li{
+     float:left;
+ }
+
+.facebook{
+     background-color:#3b5998;
+ }
+ 
+.twitter{
+     background-color:#1da1f2;
+ }
+ 
+.google{
+     background-color:#f63e28;
+ }
